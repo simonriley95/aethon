@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #0d2137; /* Deep Navy from Logo */
+    --accent-color: #1a73e8;
+    --text-muted: #6c757d;
+    --white: #ffffff;
+    --section-padding: 80px 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+/* Premium Top Bar */
+.top-bar {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    font-size: 13px;
+}
+
+.top-bar .social-links a {
+    color: white;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+/* Navigation Styles */
+.navbar-brand img {
+    transition: transform 0.3s;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    bottom: 0; left: 0;
+    background: var(--accent-color);
+    transition: 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* Hero Slider */
+.hero-slider .slide {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+/* Service Cards */
+.service-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s ease-in-out;
+    border-bottom: 4px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.icon-box {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin-top: 15px;
+}
+
+.footer {
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+        .industry-header {
+            background: linear-gradient(rgba(13, 33, 55, 0.85), rgba(13, 33, 55, 0.85)), 
+                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .industry-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background: #fff;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .industry-card:hover {
+            transform: translateY(-10px);
+        }
+        .industry-icon {
+            font-size: 2.5rem;
+            color: #1a73e8;
+            margin-bottom: 1.5rem;
+        }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for a sleek look */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #0d2137; /* Your brand navy color */
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #1a73e8; 
+}
+
+/* Premium Form Inputs */
+.form-control, .form-select {
+    border: 1px solid #e2e8f0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
+    background-color: #fff;
+}
+
+.btn-primary {
+    background: #1a73e8;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.3);
+}
+
+/* Footer Refinements */
+footer a.hover-primary:hover {
+    color: #1a73e8 !important; /* Premium Accent Blue */
+    padding-left: 5px;
+    transition: 0.3s all ease;
+}
+
+footer .input-group .form-control:focus {
+    box-shadow: none;
+}
+
+.hover-opacity-100:hover {
+    opacity: 1 !important;
+    transform: translateY(-3px);
+    transition: 0.3s all ease;
+}
+
+.bg-opacity-10 {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+       
+       
+ /* Reveal hidden elements only when they enter viewport */
+        .reveal { opacity: 0; }
+        .services-header {
+            background: linear-gradient(rgba(13, 33, 55, 0.85), rgba(13, 33, 55, 0.85)), 
+                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+        }
+        .service-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .service-img-wrapper img {
+            transition: transform 0.8s ease;
+        }
+        .service-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
