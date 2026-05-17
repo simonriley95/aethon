@@ -260,3 +260,10 @@ footer a.hover-primary:hover {
     border: solid 1px #d2d3d3;
     box-shadow: 0px 1px 2px 2px #d3d3d38f;
 }
+
+/* Contact page map css */
+.map-btn:focus, .map-btn:active {
+    border-color: var(--brand-slate) !important;
+    background-color: #fff !important;
+    box-shadow: 0 10px 15px rgba(12, 33, 58, 0.05) !important;
+}

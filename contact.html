@@ -101,9 +101,25 @@
                     <h3 class="fw-bold mb-4" style="color: var(--brand-slate);">Contact Us</h3>
                     
                     <div class="mb-4 border-bottom border-light border-opacity-10 pb-3">
-                        <h6 class="fw-bold text-white-50 small text-uppercase tracking-wider"><i class="fas fa-map-marker-alt me-2"></i>Office Locations</h6>
-                        <p class="small mb-0 mt-2 fw-semibold">Ahmedabad | Vadodara</p>
-                        <p class="small mb-0 fw-semibold">Morbi | Gandhidham</p>
+                        <h6 class="fw-bold text-white-50 small text-uppercase tracking-wider"><i class="fas fa-building me-2"></i>Head Office</h6>
+                        <p class="small mb-0 mt-2 fw-semibold text-white">Ahmedabad</p>
+                        <p class="small mb-0 text-white-50 mt-1" style="line-height: 1.5; font-size: 0.85rem;">
+                            Office No. 911, 9th Floor, The Gateway, Nearby Parikh Hospital, Gangotri to Sardar Patel Ring Road, Nikol, Ahmedabad, Gujarat 380049
+                        </p>
+                    </div>
+
+                    <div class="mb-4 border-bottom border-light border-opacity-10 pb-3">
+                        <h6 class="fw-bold text-white-50 small text-uppercase tracking-wider"><i class="fas fa-map-marker-alt me-2"></i>Branch Office - Morbi</h6>
+                        <p class="small mb-0 mt-2 style= line-height: 1.5; font-size: 0.85rem; text-white-50">
+                            Office No. 301, 3rd Floor Spire Time, Morbi Wankaner Highway, Near Trajpar Chokdi, Trajpar, Morbi 363642, Gujarat, India.
+                        </p>
+                    </div>
+
+                    <div class="mb-4 border-bottom border-light border-opacity-10 pb-3">
+                        <h6 class="fw-bold text-white-50 small text-uppercase tracking-wider"><i class="fas fa-map-marker-alt me-2"></i>Branch Office - Gandhidham</h6>
+                        <p class="small mb-0 mt-2 style= line-height: 1.5; font-size: 0.85rem; text-white-50">
+                            Office No. 10, Second Floor, Corporate Park, Plot No.102, Sector -8, Gandhidham, Gujarat, India, 370201
+                        </p>
                     </div>
                     
                     <div class="mb-4 border-bottom border-light border-opacity-10 pb-3">
@@ -161,6 +177,76 @@
         </div>
     </div>
 
+    <section class="py-5 bg-white border-top">
+    <div class="container py-4">
+        
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase tracking-wider fw-bold" style="color: var(--brand-slate) !important;">Regional Operations</h6>
+            <h2 class="display-6 fw-bold" style="color: var(--brand-navy);">Our Geographic Footprint</h2>
+            <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--brand-slate);"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 d-flex flex-column justify-content-center gap-3">
+                <button onclick="updateMap(23.0475, 72.6512, 'Ahmedabad Head Office')" class="btn w-100 text-start p-3 rounded-3 shadow-sm border border-light map-btn active-map" style="background-color: var(--brand-light); transition: all 0.3s ease;">
+                    <h6 class="fw-bold mb-1" style="color: var(--brand-navy);"><i class="fas fa-building me-2 text-secondary"></i>Head Office — Ahmedabad</h6>
+                    <small class="text-muted d-block mt-1" style="font-size: 0.8rem;">Nikol, SP Ring Road Corridor</small>
+                </button>
+
+                <button onclick="updateMap(22.8252, 70.8540, 'Morbi Branch')" class="btn w-100 text-start p-3 rounded-3 shadow-sm border border-light map-btn" style="background-color: var(--brand-light); transition: all 0.3s ease;">
+                    <h6 class="fw-bold mb-1" style="color: var(--brand-navy);"><i class="fas fa-map-marker-alt me-2 text-secondary"></i>Branch Office — Morbi</h6>
+                    <small class="text-muted d-block mt-1" style="font-size: 0.8rem;">Spire Time, Wankaner Highway</small>
+                </button>
+
+                <button onclick="updateMap(23.0768, 70.1281, 'Gandhidham Branch')" class="btn w-100 text-start p-3 rounded-3 shadow-sm border border-light map-btn" style="background-color: var(--brand-light); transition: all 0.3s ease;">
+                    <h6 class="fw-bold mb-1" style="color: var(--brand-navy);"><i class="fas fa-map-marker-alt me-2 text-secondary"></i>Branch Office — Gandhidham</h6>
+                    <small class="text-muted d-block mt-1" style="font-size: 0.8rem;">Corporate Park, Sector-8</small>
+                </button>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="shadow-lg rounded-4 overflow-hidden border p-2 bg-white" style="border-color: rgba(12,33,58,0.1) !important;">
+                    <iframe id="aethon-map-viewport" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; border-radius: 12px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            src="https://maps.google.com/maps?q=Office%20No.%20911,%20The%20Gateway,%20Nikol,%20Ahmedabad&t=&z=15&ie=UTF8&iwloc=&output=embed">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function updateMap(lat, lon, locationQuery) {
+        // Highlight active sidebar button element
+        const buttons = document.querySelectorAll('.map-btn');
+        buttons.forEach(btn => btn.style.backgroundColor = 'var(--brand-light)');
+        event.currentTarget.style.backgroundColor = '#ffffff';
+        event.currentTarget.style.borderColor = 'var(--brand-slate)';
+
+        // Update Frame Target Point Source
+        const iframe = document.getElementById('aethon-map-viewport');
+        let searchString = "";
+
+        if(locationQuery.includes('Ahmedabad')) {
+            searchString = "The%20Gateway%20Nikol%20Ahmedabad";
+        } else if(locationQuery.includes('Morbi')) {
+            searchString = "Spire%20Time%20Trajpar%20Morbi";
+        } else if(locationQuery.includes('Gandhidham')) {
+            searchString = "Corporate%20Park%20Sector%208%20Gandhidham";
+        }
+
+        iframe.src = `https://maps.google.com/maps?q=${searchString}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+    }
+</script>
+
+
+    <!-- Footer section below -->
     <footer class="footer pt-5 pb-3 shadow-lg" style="background-color: var(--brand-navy) !important; color: var(--pure-white);">
         <div class="container">
             <div class="row g-4">
@@ -227,6 +313,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
