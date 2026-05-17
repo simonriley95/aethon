@@ -11,6 +11,10 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Reveal class initialization to handle smooth on-scroll entrance animations */
+        .reveal { opacity: 0; }
+    </style>
 </head>
 <body>
 
@@ -69,7 +73,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link fw-bold text-primary" href="track.html">
+                    <a class="nav-link fw-bold text-accent" href="track.html">
                         <i class="fas fa-map-marker-alt me-1"></i> Track Shipment
                     </a>
                 </li>
@@ -89,210 +93,207 @@
     </nav>
 
     <div class="hero-slider">
-        <div class="slide" style="background-image: linear-gradient(rgba(1, 23, 54, 0.7), rgba(1, 23, 54, 0.7)), url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070');">
+        <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070');">
             <div class="container h-100 d-flex align-items-center">
                 <div class="hero-content text-white">
-                    <h1 class="animate__animated animate__fadeInDown">Global Logistics <br><span class="text-accent">Simplified.</span></h1>
+                    <h1 class="animate__animated animate__fadeInDown">Global Logistics <br><span style="color: var(--brand-slate) !important;">Simplified.</span></h1>
                     <p class="animate__animated animate__fadeInUp animate__delay-1s">Reliable Air, Sea, and Road freight solutions tailored for your business needs.</p>
                     <div class="btn-group animate__animated animate__fadeInUp animate__delay-2s">
                         <a href="#services" class="btn btn-primary me-3">Our Services</a>
-                        <a href="#" class="btn btn-outline-light">Track Shipment</a>
+                        <a href="track.html" class="btn btn-outline-light">Track Shipment</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="slide" style="background-image: linear-gradient(rgba(1, 23, 54, 0.7), rgba(1, 23, 54, 0.7)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070');">
+        <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070');">
             <div class="container h-100 d-flex align-items-center">
                 <div class="hero-content text-white">
-                    <h1>Precision in <br><span class="text-accent">Movement.</span></h1>
+                    <h1>Precision in <br><span style="color: var(--brand-slate) !important;">Movement.</span></h1>
                     <p>Expert customs clearance and project cargo handling across Gujarat and the world.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
+                    <a href="about.html" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Quick Quote Section -->
-   <section class="quick-quote-section" style="margin-top: -50px; position: relative; z-index: 10;">
-    <div class="container">
-        <div class="card border-0 shadow-lg p-4" style="border-radius: 15px; background: #fff;">
-            <form action="quote.html" method="GET">
-                <div class="row g-3 align-items-end">
-                    
-                    <div class="col-md-2">
-                        <label class="form-label small fw-bold text-uppercase text-muted">Origin</label>
-                        <select class="form-select shadow-none" name="origin" required>
-                            <option value="" disabled selected>Select Origin</option>
-                            <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
-                            <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
-                            <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
-                            <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
-                            <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
-                            <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
-                            <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
-                            <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
-                            <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
-                            <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
-                            <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
-                            <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
-                            <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
-                            <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
-                            <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
-                            <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
-                            <option value="Port of New York">Port of New York (USNYC) - United States</option>
-                            <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
-                            <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
-                        </select>
+    <section class="quick-quote-section" style="margin-top: -50px; position: relative; z-index: 10;">
+        <div class="container">
+            <div class="card border-0 shadow-lg p-4" style="border-radius: 15px; background: #fff; border: 1px solid rgba(12, 33, 58, 0.08) !important;">
+                <form action="quote.html" method="GET">
+                    <div class="row g-3 align-items-end">
+                        
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Origin</label>
+                            <select class="form-select shadow-none" name="origin" required>
+                                <option value="" disabled selected>Select Origin</option>
+                                <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
+                                <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
+                                <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
+                                <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
+                                <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
+                                <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
+                                <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
+                                <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
+                                <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
+                                <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
+                                <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
+                                <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
+                                <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
+                                <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
+                                <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
+                                <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
+                                <option value="Port of New York">Port of New York (USNYC) - United States</option>
+                                <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
+                                <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Destination</label>
+                            <select class="form-select shadow-none" name="destination" required>
+                                <option value="" disabled selected>Select Destination</option>
+                                <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
+                                <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
+                                <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
+                                <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
+                                <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
+                                <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
+                                <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
+                                <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
+                                <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
+                                <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
+                                <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
+                                <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
+                                <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
+                                <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
+                                <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
+                                <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
+                                <option value="Port of New York">Port of New York (USNYC) - United States</option>
+                                <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
+                                <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Cargo Type</label>
+                            <select class="form-select shadow-none" name="cargo_type" required>
+                                <option value="General Cargo" selected>General Cargo</option>
+                                <option value="Chemicals / Hazardous">Chemicals / Hazardous</option>
+                                <option value="Pharmaceuticals (Cold Chain)">Pharmaceuticals (Cold Chain)</option>
+                                <option value="Automotive / Parts">Automotive / Parts</option>
+                                <option value="Textiles & Apparel">Textiles & Apparel</option>
+                                <option value="Industrial Machinery">Industrial Machinery</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Mode</label>
+                            <select class="form-select shadow-none" name="mode" required>
+                                <option value="Air Freight">Air Freight</option>
+                                <option value="Sea Freight (FCL)" selected>Sea Freight (FCL)</option>
+                                <option value="Sea Freight (LCL)">Sea Freight (LCL)</option>
+                                <option value="Road Transport">Road Transport</option>
+                                <option value="Project Cargo">Project Cargo</option>
+                                <option value="Door-to-Door Delivery">Door-to-Door Delivery</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Weight</label>
+                            <input type="text" class="form-control shadow-none" name="weight" placeholder="e.g. 500kg">
+                        </div>
+
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm my-get-btn">GET QUOTE</button>
+                        </div>
+
                     </div>
-
-                    <div class="col-md-2">
-                        <label class="form-label small fw-bold text-uppercase text-muted">Destination</label>
-                        <select class="form-select shadow-none" name="destination" required>
-                            <option value="" disabled selected>Select Destination</option>
-                            <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
-                            <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
-                            <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
-                            <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
-                            <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
-                            <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
-                            <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
-                            <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
-                            <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
-                            <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
-                            <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
-                            <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
-                            <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
-                            <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
-                            <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
-                            <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
-                            <option value="Port of New York">Port of New York (USNYC) - United States</option>
-                            <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
-                            <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-2">
-                        <label class="form-label small fw-bold text-uppercase text-muted">Cargo Type</label>
-                        <select class="form-select shadow-none" name="cargo_type" required>
-                            <option value="General Cargo" selected>General Cargo</option>
-                            <option value="Chemicals / Hazardous">Chemicals / Hazardous</option>
-                            <option value="Pharmaceuticals (Cold Chain)">Pharmaceuticals (Cold Chain)</option>
-                            <option value="Automotive / Parts">Automotive / Parts</option>
-                            <option value="Textiles & Apparel">Textiles & Apparel</option>
-                            <option value="Industrial Machinery">Industrial Machinery</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-2">
-                        <label class="form-label small fw-bold text-uppercase text-muted">Mode</label>
-                        <select class="form-select shadow-none" name="mode" required>
-                            <option value="Air Freight">Air Freight</option>
-                            <option value="Sea Freight (FCL)" selected>Sea Freight (FCL)</option>
-                            <option value="Sea Freight (LCL)">Sea Freight (LCL)</option>
-                            <option value="Road Transport">Road Transport</option>
-                            <option value="Project Cargo">Project Cargo</option>
-                            <option value="Door-to-Door Delivery">Door-to-Door Delivery</option>
-                        </select>
-                    </div>
-
-                    <div class="col-md-2">
-                        <label class="form-label small fw-bold text-uppercase text-muted">Weight</label>
-                        <input type="text" class="form-control shadow-none" name="weight" placeholder="e.g. 500kg">
-                    </div>
-
-                    <div class="col-md-2">
-                        <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm my-get-btn">GET QUOTE</button>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-    <!-- Small story about company -->
-    <section class="py-5 bg-white overflow-hidden">
-<div class="container py-4">
-    <div class="row align-items-center g-5">
-        
-        <div class="col-lg-7 animate__animated animate__fadeInLeft">
-            <div class="mb-4">
-                <h6 class="text-primary fw-bold text-uppercase tracking-wider">Your Global Freight Partner</h6>
-                <h2 class="display-5 fw-bold mt-2 mb-3" style="color: #0d2137;">Aethon Maritimes LLP</h2>
-                <div style="width: 50px; height: 3px; background: #1a73e8;"></div>
-            </div>
-            
-            <h5 class="fw-semibold text-secondary mb-4 leading-relaxed">
-                A Globally Connected Freight Forwarding & Logistics Company
-            </h5>
-            
-            <p class="text-muted mb-4" style="text-align: justify; line-height: 1.8;">
-                Transforming international cargo movement with reliable, technology-enabled logistics solutions, Aethon Maritimes LLP delivers seamless freight forwarding services for businesses across global markets. Headquartered in Gujarat, we provide end-to-end logistics support across ocean freight, air freight, customs clearance, inland transportation, and supply chain coordination.
-            </p>
-            
-            <p class="text-muted mb-4" style="text-align: justify; line-height: 1.8;">
-                Backed by a growing global partner network, we manage shipments with precision, transparency, and efficiency—ensuring your cargo reaches its destination safely and on time. Whether it’s a full container load, urgent air cargo, industrial equipment, or commercial consignments, your shipment is handled with professionalism and care.
-            </p>
-            
-            <div class="d-flex gap-4 mt-4 pt-2">
-                <a href="about.html" class="btn btn-primary px-4 py-2 fw-bold shadow-sm">Read More About Us</a>
-                <a href="services.html" class="btn btn-outline-secondary px-4 py-2 fw-bold text-dark border-secondary hover-bg-light">Our Services</a>
+                </form>
             </div>
         </div>
-
-        <div class="col-lg-5 animate__animated animate__fadeInRight">
-            <div class="position-relative p-4 rounded-4 overflow-hidden" style="background-color: #f8f9fa; border: 1px solid rgba(13,33,55,0.05); min-height: 380px; z-index: 1;">
-                
-                <div class="position-absolute top-50 start-50 translate-middle opacity-5 w-100 text-center" style="z-index: -1; pointer-events: none; line-height: 1;">
-                    <i class="fas fa-ship" style="font-size: 10rem; color: #0d2137;"></i>
-                </div>
-                
-                <h5 class="fw-bold mb-4 text-center" style="color: #0d2137; position: relative; z-index: 2;">Core Operational Sectors</h5>
-                
-                <div class="d-flex align-items-center p-3 mb-3 bg-white rounded-3 shadow-sm border-start border-4 border-primary transition-hover" style="position: relative; z-index: 2;">
-                    <div class="fs-3 text-primary me-3 px-2"><i class="fas fa-ship"></i></div>
-                    <div>
-                        <h6 class="fw-bold mb-1" style="color: #0d2137;">Global Ocean Freight</h6>
-                        <p class="small text-muted mb-0">End-to-end containerized and bulk ocean movements.</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center p-3 mb-3 bg-white rounded-3 shadow-sm border-start border-4 border-primary transition-hover" style="position: relative; z-index: 2;">
-                    <div class="fs-3 text-primary me-3 px-2"><i class="fas fa-plane"></i></div>
-                    <div>
-                        <h6 class="fw-bold mb-1" style="color: #0d2137;">Expedited Air Cargo</h6>
-                        <p class="small text-muted mb-0">Time-critical international air delivery configurations.</p>
-                    </div>
-                </div>
-
-                <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-start border-4 border-primary transition-hover" style="position: relative; z-index: 2;">
-                    <div class="fs-3 text-primary me-3 px-2"><i class="fas fa-truck"></i></div>
-                    <div>
-                        <h6 class="fw-bold mb-1" style="color: #0d2137;">Inland Transport & Customs</h6>
-                        <p class="small text-muted mb-0">Gujarat local terminal transport and border clearances.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-5 text-white" style="background-color: #0d2137 !important;">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="text-uppercase tracking-wider font-weight-bold" style="color: #d3d3d3 !important;">Delivering Confidence Across Borders</h6>
-                <h2 class="display-6 fw-bold text-white">A Status Built On Reliability</h2>
-                <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: #d3d3d3;"></div>
+    <section class="py-5 bg-white overflow-hidden">
+    <div class="container py-4">
+        <div class="row align-items-center g-5">
+            
+            <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInLeft">
+                <div class="mb-4">
+                    <h6 class="fw-bold text-uppercase tracking-wider" style="color: var(--brand-slate);">Your Global Freight Partner</h6>
+                    <h2 class="display-5 fw-bold mt-2 mb-3" style="color: var(--brand-navy);">Aethon Maritimes LLP</h2>
+                    <div style="width: 50px; height: 3px; background: var(--brand-slate);"></div>
+                </div>
+                
+                <h5 class="fw-semibold mb-4 leading-relaxed" style="color: var(--brand-navy);">
+                    A Globally Connected Freight Forwarding & Logistics Company
+                </h5>
+                
+                <p class="text-muted mb-4" style="text-align: justify; line-height: 1.8;">
+                    Transforming international cargo movement with reliable, technology-enabled logistics solutions, Aethon Maritimes LLP delivers seamless freight forwarding services for businesses across global markets. Headquartered in Gujarat, we provide end-to-end logistics support across ocean freight, air freight, customs clearance, inland transportation, and supply chain coordination.
+                </p>
+                
+                <p class="text-muted mb-4" style="text-align: justify; line-height: 1.8;">
+                    Backed by a growing global partner network, we manage shipments with precision, transparency, and efficiency—ensuring your cargo reaches its destination safely and on time. Whether it’s a full container load, urgent air cargo, industrial equipment, or commercial consignments, your shipment is handled with professionalism and care.
+                </p>
+                
+                <div class="d-flex gap-4 mt-4 pt-2">
+                    <a href="about.html" class="btn btn-primary px-4 py-2 fw-bold shadow-sm">About Us</a>
+                    <a href="services.html" class="btn btn-outline-secondary px-4 py-2 fw-bold text-dark border-secondary hover-bg-light">Our Services</a>
+                </div>
             </div>
 
-            <div class="row text-center g-4">
+            <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInRight">
+                <div class="position-relative p-4 rounded-4 overflow-hidden" style="background-color: var(--brand-light); border: 1px solid rgba(12,33,55,0.05); min-height: 380px; z-index: 1;">
+                    
+                    <div class="position-absolute top-50 start-50 translate-middle opacity-5 w-100 text-center" style="z-index: -1; pointer-events: none; line-height: 1;">
+                        <i class="fas fa-ship" style="font-size: 10rem; color: var(--brand-navy);"></i>
+                    </div>
+                    
+                    <h5 class="fw-bold mb-4 text-center" style="color: var(--brand-navy); position: relative; z-index: 2;">Core Operational Sectors</h5>
+                    
+                    <div class="d-flex align-items-center p-3 mb-3 bg-white rounded-3 shadow-sm border-start border-4 transition-hover" style="position: relative; z-index: 2; border-color: var(--brand-navy) !important;">
+                        <div class="fs-3 me-3 px-2" style="color: var(--brand-navy);"><i class="fas fa-ship"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: var(--brand-navy);">Global Ocean Freight</h6>
+                            <p class="small text-muted mb-0">End-to-end containerized and bulk ocean movements.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center p-3 mb-3 bg-white rounded-3 shadow-sm border-start border-4 transition-hover" style="position: relative; z-index: 2; border-color: var(--brand-navy) !important;">
+                        <div class="fs-3 me-3 px-2" style="color: var(--brand-navy);"><i class="fas fa-plane"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: var(--brand-navy);">Expedited Air Cargo</h6>
+                            <p class="small text-muted mb-0">Time-critical international air delivery configurations.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center p-3 bg-white rounded-3 shadow-sm border-start border-4 transition-hover" style="position: relative; z-index: 2; border-color: var(--brand-navy) !important;">
+                        <div class="fs-3 me-3 px-2" style="color: var(--brand-navy);"><i class="fas fa-truck"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1" style="color: var(--brand-navy);">Inland Transport & Customs</h6>
+                            <p class="small text-muted mb-0">Gujarat local terminal transport and border clearances.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+    <section class="py-5 text-white" style="background-color: var(--brand-navy) !important;">
+        <div class="container py-4">
+            <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeInDown">
+                <h6 class="text-uppercase tracking-wider font-weight-bold" style="color: var(--brand-slate) !important;">Delivering Confidence Across Borders</h6>
+                <h2 class="display-6 fw-bold text-white">A Status Built On Reliability</h2>
+                <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--brand-slate);"></div>
+            </div>
+
+            <div class="row text-center g-4 reveal animate__animated" data-animation="animate__fadeInUp">
                 <div class="col-md-3 col-sm-6">
                     <div class="p-3">
-                        <div class="display-4 fw-bold mb-2" style="color: #d3d3d3;">
+                        <div class="display-4 fw-bold mb-2" style="color: var(--brand-slate);">
                             <span class="counter-value" data-target="150">0</span>+
                         </div>
                         <h6 class="fw-bold mb-2 text-white">Global Freight Network</h6>
@@ -302,7 +303,7 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="p-3">
-                        <div class="display-4 fw-bold mb-2" style="color: #d3d3d3;">
+                        <div class="display-4 fw-bold mb-2" style="color: var(--brand-slate);">
                             <span class="counter-value" data-target="500">0</span>+
                         </div>
                         <h6 class="fw-bold mb-2 text-white">Shipments Managed</h6>
@@ -312,7 +313,7 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="p-3">
-                        <div class="display-4 fw-bold mb-2" style="color: #d3d3d3;">24/7</div>
+                        <div class="display-4 fw-bold mb-2" style="color: var(--brand-slate);">24/7</div>
                         <h6 class="fw-bold mb-2 text-white">Customer Assistance</h6>
                         <p class="small text-white-50 mb-0">Always connected support</p>
                     </div>
@@ -320,7 +321,7 @@
 
                 <div class="col-md-3 col-sm-6">
                     <div class="p-3">
-                        <div class="display-4 fw-bold mb-2" style="color: #d3d3d3;"><i class="fas fa-check-double"></i></div>
+                        <div class="display-4 fw-bold mb-2" style="color: var(--brand-slate);"><i class="fas fa-check-double"></i></div>
                         <h6 class="fw-bold mb-2 text-white">Safe & Compliant</h6>
                         <p class="small text-white-50 mb-0">Logistics operations</p>
                     </div>
@@ -329,54 +330,53 @@
         </div>
     </section>
 
-    <!-- Core Competencies -->
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-white">
         <div class="container py-5">
-            <div class="text-center mb-5">
-                <h6 class="text-primary fw-bold text-uppercase tracking-wider">Core Competencies</h6>
-                <h2 class="display-5 fw-bold" style="color: #0d2137;">Why Businesses Choose Us</h2>
-                <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: #1a73e8;"></div>
+            <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeInDown">
+                <h6 class="fw-bold text-uppercase tracking-wider" style="color: var(--brand-slate);">Core Competencies</h6>
+                <h2 class="display-5 fw-bold" style="color: var(--brand-navy);">Why Businesses Choose Us</h2>
+                <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--brand-slate);"></div>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 reveal animate__animated" data-animation="animate__fadeInUp">
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-0 h-100 transition-hover">
-                        <div class="icon-circle mb-3 text-primary bg-light d-inline-flex p-3 rounded-circle"><i class="fas fa-network-wired fa-xl"></i></div>
-                        <h5 class="fw-bold mb-2" style="color: #0d2137;">Global Connectivity</h5>
+                    <div class="p-4 rounded-4 shadow-sm border-0 h-100 transition-hover" style="background-color: var(--brand-light);">
+                        <div class="icon-circle mb-3 d-inline-flex p-3 rounded-circle" style="background-color: var(--pure-white); color: var(--brand-navy);"><i class="fas fa-network-wired fa-xl"></i></div>
+                        <h5 class="fw-bold mb-2" style="color: var(--brand-navy);">Global Connectivity</h5>
                         <p class="text-muted small mb-0">Global shipping network and partner connectivity across key trade lanes.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-0 h-100 transition-hover">
-                        <div class="icon-circle mb-3 text-primary bg-light d-inline-flex p-3 rounded-circle"><i class="fas fa-eye fa-xl"></i></div>
-                        <h5 class="fw-bold mb-2" style="color: #0d2137;">Absolute Transparency</h5>
+                    <div class="p-4 rounded-4 shadow-sm border-0 h-100 transition-hover" style="background-color: var(--brand-light);">
+                        <div class="icon-circle mb-3 d-inline-flex p-3 rounded-circle" style="background-color: var(--pure-white); color: var(--brand-navy);"><i class="fas fa-eye fa-xl"></i></div>
+                        <h5 class="fw-bold mb-2" style="color: var(--brand-navy);">Absolute Transparency</h5>
                         <p class="text-muted small mb-0">Transparent communication and complete shipment visibility from origin to destination.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-0 h-100 transition-hover">
-                        <div class="icon-circle mb-3 text-primary bg-light d-inline-flex p-3 rounded-circle"><i class="fas fa-sliders-h fa-xl"></i></div>
-                        <h5 class="fw-bold mb-2" style="color: #0d2137;">Tailored Solutions</h5>
+                    <div class="p-4 rounded-4 shadow-sm border-0 h-100 transition-hover" style="background-color: var(--brand-light);">
+                        <div class="icon-circle mb-3 d-inline-flex p-3 rounded-circle" style="background-color: var(--pure-white); color: var(--brand-navy);"><i class="fas fa-sliders-h fa-xl"></i></div>
+                        <h5 class="fw-bold mb-2" style="color: var(--brand-navy);">Tailored Solutions</h5>
                         <p class="text-muted small mb-0">Competitive freight solutions accurately scaled and customized to your cargo needs.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-0 h-100 transition-hover">
-                        <div class="icon-circle mb-3 text-primary bg-light d-inline-flex p-3 rounded-circle"><i class="fas fa-file-alt fa-xl"></i></div>
-                        <h5 class="fw-bold mb-2" style="color: #0d2137;">Expert Documentation</h5>
+                    <div class="p-4 rounded-4 shadow-sm border-0 h-100 transition-hover" style="background-color: var(--brand-light);">
+                        <div class="icon-circle mb-3 d-inline-flex p-3 rounded-circle" style="background-color: var(--pure-white); color: var(--brand-navy);"><i class="fas fa-file-alt fa-xl"></i></div>
+                        <h5 class="fw-bold mb-2" style="color: var(--brand-navy);">Expert Documentation</h5>
                         <p class="text-muted small mb-0">Experienced handling of complex customs regulations and structural documentation support.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-0 h-100 transition-hover">
-                        <div class="icon-circle mb-3 text-primary bg-light d-inline-flex p-3 rounded-circle"><i class="fas fa-shipping-fast fa-xl"></i></div>
-                        <h5 class="fw-bold mb-2" style="color: #0d2137;">Timely Delivery</h5>
+                    <div class="p-4 rounded-4 shadow-sm border-0 h-100 transition-hover" style="background-color: var(--brand-light);">
+                        <div class="icon-circle mb-3 d-inline-flex p-3 rounded-circle" style="background-color: var(--pure-white); color: var(--brand-navy);"><i class="fas fa-shipping-fast fa-xl"></i></div>
+                        <h5 class="fw-bold mb-2" style="color: var(--brand-navy);">Timely Delivery</h5>
                         <p class="text-muted small mb-0">Unwavering commitment to secure and timely delivery parameters on all global lanes.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white rounded-4 shadow-sm border-0 h-100 transition-hover">
-                        <div class="icon-circle mb-3 text-primary bg-light d-inline-flex p-3 rounded-circle"><i class="fas fa-headset fa-xl"></i></div>
-                        <h5 class="fw-bold mb-2" style="color: #0d2137;">Customer First Focus</h5>
+                    <div class="p-4 rounded-4 shadow-sm border-0 h-100 transition-hover" style="background-color: var(--brand-light);">
+                        <div class="icon-circle mb-3 d-inline-flex p-3 rounded-circle" style="background-color: var(--pure-white); color: var(--brand-navy);"><i class="fas fa-headset fa-xl"></i></div>
+                        <h5 class="fw-bold mb-2" style="color: var(--brand-navy);">Customer First Focus</h5>
                         <p class="text-muted small mb-0">Highly responsive customer service offering ultra-quick request processing turnarounds.</p>
                     </div>
                 </div>
@@ -384,48 +384,44 @@
         </div>
     </section>
 
-    <!-- Associated Partners & Carriers -->
-    <section class="py-5" style="background-color: var(--white);">
-    <div class="container py-4">
-        
-        <div class="text-center mb-5">
-            <h6 class="text-uppercase tracking-wider fw-bold" style="color: var(--brand-slate) !important;">Global Network Alliances</h6>
-            <h2 class="display-6 fw-bold" style="color: var(--brand-navy);">Associated Partners & Carriers</h2>
-            <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--brand-slate);"></div>
-        </div>
-
-        <div class="partner-slider mt-4">
-            <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--brand-navy); opacity: 0.6;">MAERSK</div>
-            <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--brand-navy); opacity: 0.6;">MSC</div>
-            <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--brand-navy); opacity: 0.6;">CMA CGM</div>
-            <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--brand-navy); opacity: 0.6;">COSCO</div>
-            <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--brand-navy); opacity: 0.6;">ONE</div>
-            <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: var(--brand-navy); opacity: 0.6;">HAPAG-LLOYD</div>
-        </div>
-
-    </div>
-</section>
-
-    <!-- What Our Customers Say -->
-    <section class="py-5 bg-light">
+    <section class="py-5 border-top text-white" style="background-color: var(--brand-navy) !important;">
         <div class="container py-4">
-            <div class="text-center mb-5">
-                <h6 class="text-primary fw-bold text-uppercase tracking-wider">Client Testimonials</h6>
-                <h2 class="display-6 fw-bold" style="color: #0d2137;">What Our Customers Say</h2>
+            <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeInDown">
+                <h6 class="text-uppercase tracking-wider fw-bold" style="color: var(--brand-slate) !important;">Global Network Alliances</h6>
+                <h2 class="display-6 fw-bold text-white">Associated Partners & Carriers</h2>
+                <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--brand-slate);"></div>
+            </div>
+
+            <div class="partner-slider mt-4 reveal animate__animated" data-animation="animate__fadeInUp">
+                <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: #ffffff; opacity: 0.8;">MAERSK</div>
+                <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: #ffffff; opacity: 0.8;">MSC</div>
+                <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: #ffffff; opacity: 0.8;">CMA CGM</div>
+                <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: #ffffff; opacity: 0.8;">COSCO</div>
+                <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: #ffffff; opacity: 0.8;">ONE</div>
+                <div class="mx-4 text-center font-weight-bold" style="font-size: 1.5rem; letter-spacing: 2px; color: #ffffff; opacity: 0.8;">HAPAG-LLOYD</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeInDown">
+                <h6 class="fw-bold text-uppercase tracking-wider" style="color: var(--brand-slate);">Client Testimonials</h6>
+                <h2 class="display-6 fw-bold" style="color: var(--brand-navy);">What Our Customers Say</h2>
                 <div class="d-flex justify-content-center align-items-center mt-2 small text-warning gap-1">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <span class="text-muted ms-2 small">(Based on Google Business Profile Reviews)</span>
                 </div>
             </div>
-            <div class="row g-4">
+            <div class="row g-4 reveal animate__animated" data-animation="animate__fadeInUp">
                 <div class="col-md-4">
-                    <div class="p-4 bg-white border-0 shadow-sm rounded-4 h-100 d-flex flex-column justify-content-between">
+                    <div class="p-4 rounded-4 h-100 d-flex flex-column justify-content-between border" style="background-color: var(--brand-light);">
                         <div>
                             <div class="text-warning mb-2 small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <p class="text-secondary small mb-3 italic">"Aethon Maritimes handled our export customs check directly at port with complete tracking visibility. Zero delays, exceptional communication from the team."</p>
                         </div>
-                        <div class="d-flex align-items-center gap-2 mt-2 pt-3 border-top">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center font-bold text-xs" style="width: 32px; height: 32px;">K</div>
+                        <div class="d-flex align-items-center gap-2 mt-2 pt-3 border-top border-secondary border-opacity-10">
+                            <div class="text-white rounded-circle d-flex align-items-center justify-content-center font-bold text-xs" style="width: 32px; height: 32px; background-color: var(--brand-navy);">K</div>
                             <div>
                                 <h6 class="mb-0 small fw-bold text-dark">Ketan Shah</h6>
                                 <span class="text-muted" style="font-size: 10px;">Exporter, Ahmedabad</span>
@@ -434,13 +430,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white border-0 shadow-sm rounded-4 h-100 d-flex flex-column justify-content-between">
+                    <div class="p-4 rounded-4 h-100 d-flex flex-column justify-content-between border" style="background-color: var(--brand-light);">
                         <div>
                             <div class="text-warning mb-2 small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <p class="text-secondary small mb-3 italic">"Highly professional approach toward bulk sea freight container booking. Their logistics networks across Morbi tiles corridors helped us secure great freight rates."</p>
                         </div>
-                        <div class="d-flex align-items-center gap-2 mt-2 pt-3 border-top">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center font-bold text-xs" style="width: 32px; height: 32px;">P</div>
+                        <div class="d-flex align-items-center gap-2 mt-2 pt-3 border-top border-secondary border-opacity-10">
+                            <div class="text-white rounded-circle d-flex align-items-center justify-content-center font-bold text-xs" style="width: 32px; height: 32px; background-color: var(--brand-navy);">P</div>
                             <div>
                                 <h6 class="mb-0 small fw-bold text-dark">Patel Ceramics</h6>
                                 <span class="text-muted" style="font-size: 10px;">Logistics Manager, Morbi</span>
@@ -449,13 +445,13 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-4 bg-white border-0 shadow-sm rounded-4 h-100 d-flex flex-column justify-content-between">
+                    <div class="p-4 rounded-4 h-100 d-flex flex-column justify-content-between border" style="background-color: var(--brand-light);">
                         <div>
                             <div class="text-warning mb-2 small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                             <p class="text-secondary small mb-3 italic">"Their air cargo support handling for precision equipment into Gandhidham terminal was prompt. Completely recommended for timeline-critical commercial deliveries."</p>
                         </div>
-                        <div class="d-flex align-items-center gap-2 mt-2 pt-3 border-top">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center font-bold text-xs" style="width: 32px; height: 32px;">M</div>
+                        <div class="d-flex align-items-center gap-2 mt-2 pt-3 border-top border-secondary border-opacity-10">
+                            <div class="text-white rounded-circle d-flex align-items-center justify-content-center font-bold text-xs" style="width: 32px; height: 32px; background-color: var(--brand-navy);">M</div>
                             <div>
                                 <h6 class="mb-0 small fw-bold text-dark">Mehta & Sons Trading</h6>
                                 <span class="text-muted" style="font-size: 10px;">Operations Director</span>
@@ -467,88 +463,86 @@
         </div>
     </section>
 
-    <!-- Services section below -->
-    <section id="services" class="py-5" style="background-color: #f8f9fa;">
+    <section id="services" class="py-5 text-white" style="background-color: var(--brand-navy) !important;">
     <div class="container py-5">
-        <div class="text-center mb-5 animate__animated animate__fadeIn">
-            <h6 class="text-primary fw-bold text-uppercase tracking-wider">Our Core Offerings</h6>
-            <h2 class="display-5 fw-bold">Integrated Logistics Solutions</h2>
-            <div style="width: 70px; height: 4px; background: #1a73e8; margin: 20px auto;"></div>
-            <p class="text-muted max-w-700 mx-auto">We combine all services into a seamless supply chain solution, ensuring efficiency and cost savings.</p>
+        <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeInDown">
+            <h6 class="fw-bold text-uppercase tracking-wider" style="color: var(--brand-slate);">Our Core Offerings</h6>
+            <h2 class="display-5 fw-bold text-white">Integrated Logistics Solutions</h2>
+            <div class="mx-auto mt-3" style="width: 70px; height: 3px; background: var(--brand-slate);"></div>
+            <p class="text-white-50 max-w-700 mx-auto mt-3">We combine all services into a seamless supply chain solution, ensuring efficiency and cost savings.</p>
         </div>
 
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp">
-                <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm border-0">
-                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: rgba(26,115,232,0.1); color: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+        <div class="row g-4 reveal animate__animated" data-animation="animate__fadeInUp">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 p-4 bg-white rounded-4 border shadow-sm">
+                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: var(--brand-light); color: var(--brand-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                         <i class="fas fa-plane"></i>
                     </div>
-                    <h4 class="fw-bold">Air Freight</h4>
+                    <h4 class="fw-bold" style="color: var(--brand-navy);">Air Freight</h4>
                     <p class="text-muted small">Fast, reliable, and time-critical delivery worldwide via leading global airlines.</p>
-                    <a href="services.html#air" class="text-primary fw-bold text-decoration-none small">Explore Air Freight <i class="fas fa-arrow-right ms-1"></i></a>
+                    <a href="services.html#air" class="fw-bold text-decoration-none small" style="color: var(--brand-navy);">Explore Air Freight <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm border-0">
-                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: rgba(26,115,232,0.1); color: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 p-4 bg-white rounded-4 border shadow-sm">
+                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: var(--brand-light); color: var(--brand-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                         <i class="fas fa-ship"></i>
                     </div>
-                    <h4 class="fw-bold">Sea Freight</h4>
+                    <h4 class="fw-bold" style="color: var(--brand-navy);">Sea Freight</h4>
                     <p class="text-muted small">Economical FCL and LCL solutions for large and bulk shipments across international waters.</p>
-                    <a href="services.html#sea" class="text-primary fw-bold text-decoration-none small">Explore Sea Freight <i class="fas fa-arrow-right ms-1"></i></a>
+                    <a href="services.html#sea" class="fw-bold text-decoration-none small" style="color: var(--brand-navy);">Explore Sea Freight <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm border-0">
-                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: rgba(26,115,232,0.1); color: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 p-4 bg-white rounded-4 border shadow-sm">
+                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: var(--brand-light); color: var(--brand-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h4 class="fw-bold">Road Transport</h4>
+                    <h4 class="fw-bold" style="color: var(--brand-navy);">Road Transport</h4>
                     <p class="text-muted small">Efficient inland transportation (FTL/LTL) across cities and borders with GPS tracking.</p>
-                    <a href="services.html#road" class="text-primary fw-bold text-decoration-none small">Explore Road Transport <i class="fas fa-arrow-right ms-1"></i></a>
+                    <a href="services.html#road" class="fw-bold text-decoration-none small" style="color: var(--brand-navy);">Explore Road Transport <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp">
-                <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm border-0">
-                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: rgba(26,115,232,0.1); color: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 p-4 bg-white rounded-4 border shadow-sm">
+                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: var(--brand-light); color: var(--brand-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                         <i class="fas fa-file-invoice-dollar"></i>
                     </div>
-                    <h4 class="fw-bold">Customs Clearance</h4>
+                    <h4 class="fw-bold" style="color: var(--brand-navy);">Customs Clearance</h4>
                     <p class="text-muted small">Smooth and compliant import/export processing with expert regulatory knowledge.</p>
-                    <a href="services.html#customs" class="text-primary fw-bold text-decoration-none small">View Compliance <i class="fas fa-arrow-right ms-1"></i></a>
+                    <a href="services.html#customs" class="fw-bold text-decoration-none small" style="color: var(--brand-navy);">View Compliance <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
-                <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm border-0">
-                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: rgba(26,115,232,0.1); color: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 p-4 bg-white rounded-4 border shadow-sm">
+                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: var(--brand-light); color: var(--brand-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                         <i class="fas fa-warehouse"></i>
                     </div>
-                    <h4 class="fw-bold">Warehousing</h4>
+                    <h4 class="fw-bold" style="color: var(--brand-navy);">Warehousing</h4>
                     <p class="text-muted small">Secure storage and pick-and-pack services with real-time inventory visibility.</p>
-                    <a href="services.html#warehouse" class="text-primary fw-bold text-decoration-none small">Manage Inventory <i class="fas fa-arrow-right ms-1"></i></a>
+                    <a href="services.html#warehouse" class="fw-bold text-decoration-none small" style="color: var(--brand-navy);">Manage Inventory <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                <div class="service-card h-100 p-4 bg-white rounded-4 shadow-sm border-0">
-                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: rgba(26,115,232,0.1); color: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card h-100 p-4 bg-white rounded-4 border shadow-sm">
+                    <div class="icon-circle mb-4" style="width: 60px; height: 60px; background: var(--brand-light); color: var(--brand-navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;">
                         <i class="fas fa-cogs"></i>
                     </div>
-                    <h4 class="fw-bold">Project Cargo</h4>
+                    <h4 class="fw-bold" style="color: var(--brand-navy);">Project Cargo</h4>
                     <p class="text-muted small">Specialized handling for oversized and complex shipments with dedicated management.</p>
-                    <a href="services.html#project" class="text-primary fw-bold text-decoration-none small">Heavy Lift Solutions <i class="fas fa-arrow-right ms-1"></i></a>
+                    <a href="services.html#project" class="fw-bold text-decoration-none small" style="color: var(--brand-navy);">Heavy Lift Solutions <i class="fas fa-arrow-right ms-1"></i></a>
                 </div>
             </div>
         </div>
     </div>
     </section>
 
-    <!-- Footer section below -->
-    <footer class="bg-dark text-white pt-5 pb-3 mt-5 shadow-lg" style="background-color: #0d2137 !important;">
+    <footer class="footer pt-5 pb-3 shadow-lg" style="background-color: var(--brand-navy) !important; color: var(--pure-white);">
     <div class="container">
         <div class="row g-4">
             <div class="col-lg-3 col-md-6 mb-4">
@@ -563,34 +557,34 @@
             </div>
 
             <div class="col-lg-2 col-md-6 mb-4">
-                <h5 class="fw-bold mb-4 border-start border-primary border-4 ps-3">Quick Links</h5>
+                <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Quick Links</h5>
                 <ul class="list-unstyled lh-lg small text-white-50">
-                    <li><a href="index.html" class="text-decoration-none text-reset hover-primary">Home</a></li>
-                    <li><a href="services.html" class="text-decoration-none text-reset hover-primary">Services</a></li>
-                    <li><a href="industries.html" class="text-decoration-none text-reset hover-primary">Industries Served</a></li>
-                    <li><a href="about.html" class="text-decoration-none text-reset hover-primary">About Us</a></li>
-                    <li><a href="track.html" class="text-decoration-none text-reset hover-primary text-info">Track Shipment</a></li>
+                    <li><a href="index.html" class="text-decoration-none text-reset hover-primary text-white-50">Home</a></li>
+                    <li><a href="services.html" class="text-decoration-none text-reset hover-primary text-white-50">Services</a></li>
+                    <li><a href="industries.html" class="text-decoration-none text-reset hover-primary text-white-50">Industries Served</a></li>
+                    <li><a href="about.html" class="text-decoration-none text-reset hover-primary text-white-50">About Us</a></li>
+                    <li><a href="track.html" class="text-decoration-none text-reset hover-primary text-white-50">Track Shipment</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="fw-bold mb-4 border-start border-primary border-4 ps-3">Our Locations</h5>
+                <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Our Locations</h5>
                 <div class="text-white-50 small">
-                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i><strong>Ahmedabad / Vadodara</strong></p> 
-                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i><strong>Morbi / Gandhidham</strong></p> 
-                    <p class="mt-3"><i class="fas fa-clock text-primary me-2"></i>Mon - Sat: 10:00 - 19:00</p> 
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i><strong>Ahmedabad / Vadodara</strong></p> 
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i><strong>Morbi / Gandhidham</strong></p> 
+                    <p class="mt-3"><i class="fas fa-clock me-2" style="color: var(--brand-slate);"></i>Mon - Sat: 10:00 - 19:00</p> 
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="fw-bold mb-4 border-start border-primary border-4 ps-3">Newsletter</h5> 
+                <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Newsletter</h5> 
                 <p class="small text-white-50 mb-4">Subscribe to receive the latest logistics news and compliance updates.</p>
                 <div class="input-group mb-4 shadow-sm">
                     <input type="email" class="form-control border-0 px-3" placeholder="Enter Email" style="border-radius: 5px 0 0 5px;">
-                    <button class="btn btn-primary fw-bold px-4" style="border-radius: 0 5px 5px 0;">JOIN</button>
+                    <button class="btn btn-primary fw-bold px-4" style="border-radius: 0 5px 5px 0; background-color: var(--brand-slate) !important; border-color: var(--brand-slate) !important;">JOIN</button>
                 </div>
                 <div class="contact-box p-3 rounded bg-white bg-opacity-10">
-                    <p class="mb-1 small">Support Email:</p>
+                    <p class="mb-1 small text-white-50">Support Email:</p>
                     <a href="mailto:INFO@AETHONMARITIMES.COM" class="text-white text-decoration-none fw-bold small">INFO@AETHONMARITIMES.COM</a> 
                 </div>
             </div>
@@ -600,7 +594,7 @@
 
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start">
-                <p class="small text-white-50 mb-0">&copy; 2026 Aethon Maritimes. All Rights Reserved.</p>
+                <p class="small text-white-50 mb-0">© 2026 Aethon Maritimes. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <ul class="list-inline mb-0 small">
@@ -620,6 +614,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Centralized On-Scroll entry point animation tracking scripts
+        const observerOptions = { threshold: 0.15 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const animation = entry.target.getAttribute('data-animation');
+                    if (animation) {
+                        entry.target.classList.add(animation);
+                        entry.target.style.opacity = "1";
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
 
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
