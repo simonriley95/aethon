@@ -1,39 +1,73 @@
+/* =========================================================================
+   STRICT 3-COLOR BRAND PALETTE SYSTEM
+   ========================================================================= */
 :root {
-    --primary-color: #0d2137; /* Deep Navy from Logo */
-    --accent-color: #1a73e8;
-    --text-muted: #6c757d;
-    --white: #ffffff;
+    --brand-navy: #0c213a;   /* Primary Color: From Logo Main Title & Ship */
+    --brand-slate: #7e848b;  /* Accent Color: From Logo Subtitle 'MARITIMES' */
+    --brand-light: #f4f6f8;  /* Background Tint: From Logo Subtle Globe Continents */
+    --pure-white: #ffffff;   /* Content System Base Layer Only */
     --section-padding: 80px 0;
 }
 
+/* =========================================================================
+   GLOBAL FOUNDATION SETUP
+   ========================================================================= */
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--brand-navy);
+    background-color: var(--pure-white);
     overflow-x: hidden;
 }
 
-/* Premium Top Bar */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sleek Scrollbar Themed with Logo Colors */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--brand-light);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--brand-navy);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--brand-slate); 
+}
+
+/* =========================================================================
+   TOP COMMUNICATION BAR
+   ========================================================================= */
 .top-bar {
-    background: var(--primary-color);
-    color: white;
+    background: var(--brand-navy);
+    color: var(--pure-white);
     padding: 10px 0;
     font-size: 13px;
 }
 
 .top-bar .social-links a {
-    color: white;
+    color: var(--pure-white);
     margin-left: 15px;
-    transition: 0.3s;
+    transition: opacity 0.3s ease;
 }
 
-/* Navigation Styles */
+.top-bar .social-links a:hover {
+    opacity: 0.8;
+}
+
+/* =========================================================================
+   NAVIGATION LINK STYLING
+   ========================================================================= */
 .navbar-brand img {
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .nav-link {
     font-weight: 600;
-    color: var(--primary-color) !important;
+    color: var(--brand-navy) !important;
     margin: 0 10px;
     position: relative;
 }
@@ -41,25 +75,41 @@ body {
 .nav-link::after {
     content: '';
     position: absolute;
-    width: 0; height: 2px;
-    bottom: 0; left: 0;
-    background: var(--accent-color);
-    transition: 0.3s;
+    width: 0; 
+    height: 2px;
+    bottom: 0; 
+    left: 0;
+    background: var(--brand-slate);
+    transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
 
+/* =========================================================================
+   PRIMARY BUTTON ACTIONS (NO GENERIC BLUE)
+   ========================================================================= */
 .btn-primary {
-    background-color: var(--accent-color);
-    border: none;
+    background-color: var(--brand-navy) !important;
+    border: 1px solid var(--brand-navy) !important;
+    color: var(--pure-white) !important;
     padding: 12px 25px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-weight: 700;
+    transition: all 0.3s ease !important;
 }
 
-/* Hero Slider */
+.btn-primary:hover {
+    background-color: var(--brand-slate) !important;
+    border-color: var(--brand-slate) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(12, 33, 58, 0.15);
+}
+
+/* =========================================================================
+   HERO ROTATOR FRAME SYSTEM
+   ========================================================================= */
 .hero-slider .slide {
     height: 80vh;
     background-size: cover;
@@ -73,153 +123,140 @@ body {
 }
 
 .text-accent {
-    color: var(--accent-color);
+    color: var(--brand-slate) !important;
 }
 
-/* Service Cards */
-.service-card {
-    background: #fff;
+/* =========================================================================
+   PREMIUM CONVERSION FORMS
+   ========================================================================= */
+.form-control, .form-select {
+    border: 1px solid var(--brand-slate);
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--brand-navy);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--brand-navy);
+    box-shadow: 0 0 0 4px rgba(12, 33, 58, 0.1);
+    background-color: var(--pure-white);
+    outline: none;
+}
+
+/* =========================================================================
+   SERVICE & INDUSTRY DISPLAY CARDS
+   ========================================================================= */
+.service-card, .industry-card {
+    background: var(--pure-white);
     padding: 40px;
+    border: 1px solid rgba(126, 132, 139, 0.15);
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.4s ease-in-out;
+    box-shadow: 0 10px 30px rgba(12, 33, 58, 0.03);
+    transition: all 0.4s ease-in-out;
     border-bottom: 4px solid transparent;
 }
 
-.service-card:hover {
+.service-card:hover, .industry-card:hover {
     transform: translateY(-10px);
-    border-bottom: 4px solid var(--accent-color);
+    border-bottom: 4px solid var(--brand-navy);
+    box-shadow: 0 15px 35px rgba(12, 33, 58, 0.08);
 }
 
-.icon-box {
+.icon-box, .industry-icon {
     font-size: 40px;
-    color: var(--accent-color);
+    color: var(--brand-navy);
     margin-bottom: 20px;
 }
 
 .divider {
     width: 60px;
     height: 4px;
-    background: var(--accent-color);
+    background: var(--brand-slate);
     margin-top: 15px;
 }
 
+/* =========================================================================
+   COMPONENTS: LIVE UTILITY COUNTERS
+   ========================================================================= */
+.counter-value {
+    color: #d3d3d3;
+}
+
+/* =========================================================================
+   SECTIONS: INTERACTIVE SCROLL-REVEALS
+   ========================================================================= */
+.reveal { 
+    opacity: 0; 
+    transition: all 0.6s ease;
+}
+
+.services-header, .industry-header {
+    background: linear-gradient(rgba(12, 33, 58, 0.85), rgba(12, 33, 58, 0.85)), 
+                url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+    color: var(--pure-white);
+    padding: 120px 0;
+}
+
+.service-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid rgba(126, 132, 139, 0.2);
+}
+
+.service-img-wrapper img {
+    transition: transform 0.8s ease;
+}
+
+.service-img-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================================================
+   STRUCTURAL FOOTER SECTION
+   ========================================================================= */
 .footer {
-    background: #f8f9fa;
-    border-top: 1px solid #eee;
+    background: var(--brand-light) !important;
+    border-top: 1px solid rgba(126, 132, 139, 0.2);
+    color: var(--brand-navy);
 }
 
-        .industry-header {
-            background: linear-gradient(rgba(13, 33, 55, 0.85), rgba(13, 33, 55, 0.85)), 
-                        url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 0;
-        }
-        .industry-card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            background: #fff;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        .industry-card:hover {
-            transform: translateY(-10px);
-        }
-        .industry-icon {
-            font-size: 2.5rem;
-            color: #1a73e8;
-            margin-bottom: 1.5rem;
-        }
-
-html {
-    scroll-behavior: smooth;
-}
-
-/* Custom Scrollbar for a sleek look */
-::-webkit-scrollbar {
-    width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background: #0d2137; /* Your brand navy color */
-    border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #1a73e8; 
-}
-
-/* Premium Form Inputs */
-.form-control, .form-select {
-    border: 1px solid #e2e8f0;
-    padding: 0.75rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
+footer a.hover-primary {
+    color: var(--brand-navy);
     transition: all 0.3s ease;
 }
 
-.form-control:focus, .form-select:focus {
-    border-color: #1a73e8;
-    box-shadow: 0 0 0 4px rgba(26, 115, 232, 0.1);
-    background-color: #fff;
-}
-
-.btn-primary {
-    background: #1a73e8;
-    border: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(26, 115, 232, 0.3);
-}
-
-/* Footer Refinements */
 footer a.hover-primary:hover {
-    color: #1a73e8 !important; /* Premium Accent Blue */
+    color: var(--brand-slate) !important;
     padding-left: 5px;
-    transition: 0.3s all ease;
-}
-
-footer .input-group .form-control:focus {
-    box-shadow: none;
 }
 
 .hover-opacity-100:hover {
-    opacity: 1 !important;
+    opacity: 0.7 !important;
     transform: translateY(-3px);
-    transition: 0.3s all ease;
+    transition: all 0.3s ease;
 }
 
 .bg-opacity-10 {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(12, 33, 58, 0.05) !important;
 }
 
-       
-       
- /* Reveal hidden elements only when they enter viewport */
-        .reveal { opacity: 0; }
-        .services-header {
-            background: linear-gradient(rgba(13, 33, 55, 0.85), rgba(13, 33, 55, 0.85)), 
-                        url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            padding: 120px 0;
-        }
-        .service-img-wrapper {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-        }
-        .service-img-wrapper img {
-            transition: transform 0.8s ease;
-        }
-        .service-img-wrapper:hover img {
-            transform: scale(1.05);
-        }
+.my-get-btn {
+    padding: 11px 15px !important;
+}
+
+.rounded-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px !important;
+    color: #082740 !important;
+    border: solid 1px #d2d3d3;
+    box-shadow: 0px 1px 2px 2px #d3d3d38f;
+}
