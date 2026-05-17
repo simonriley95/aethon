@@ -79,7 +79,7 @@
                 </li>
 
                 <li class="nav-item ms-lg-3">
-                    <a class="btn btn-primary px-4 fw-bold shadow-sm" href="contact.html">
+                    <a class="btn btn-primary px-4 fw-bold shadow-sm" href="quote.html">
                         GET A QUOTE
                     </a>
                 </li>
@@ -113,48 +113,102 @@
     </div>
 
     <!-- Quick Quote Section -->
-    <section class="quick-quote-section" style="margin-top: -50px; position: relative; z-index: 10;">
+   <section class="quick-quote-section" style="margin-top: -50px; position: relative; z-index: 10;">
     <div class="container">
         <div class="card border-0 shadow-lg p-4" style="border-radius: 15px; background: #fff;">
-            <form action="#" method="POST">
+            <form action="quote.html" method="GET">
                 <div class="row g-3 align-items-end">
+                    
                     <div class="col-md-2">
                         <label class="form-label small fw-bold text-uppercase text-muted">Origin</label>
-                        <input type="text" class="form-control shadow-none" placeholder="City/Port" required>
+                        <select class="form-select shadow-none" name="origin" required>
+                            <option value="" disabled selected>Select Origin</option>
+                            <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
+                            <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
+                            <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
+                            <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
+                            <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
+                            <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
+                            <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
+                            <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
+                            <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
+                            <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
+                            <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
+                            <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
+                            <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
+                            <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
+                            <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
+                            <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
+                            <option value="Port of New York">Port of New York (USNYC) - United States</option>
+                            <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
+                            <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
+                        </select>
                     </div>
+
                     <div class="col-md-2">
                         <label class="form-label small fw-bold text-uppercase text-muted">Destination</label>
-                        <input type="text" class="form-control shadow-none" placeholder="City/Port" required>
+                        <select class="form-select shadow-none" name="destination" required>
+                            <option value="" disabled selected>Select Destination</option>
+                            <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
+                            <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
+                            <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
+                            <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
+                            <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
+                            <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
+                            <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
+                            <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
+                            <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
+                            <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
+                            <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
+                            <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
+                            <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
+                            <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
+                            <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
+                            <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
+                            <option value="Port of New York">Port of New York (USNYC) - United States</option>
+                            <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
+                            <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
+                        </select>
                     </div>
+
                     <div class="col-md-2">
                         <label class="form-label small fw-bold text-uppercase text-muted">Cargo Type</label>
-                        <select class="form-select shadow-none">
-                            <option selected>General</option>
-                            <option>Pharmaceuticals</option>
-                            <option>Automotive</option>
-                            <option>Hazardous</option>
+                        <select class="form-select shadow-none" name="cargo_type" required>
+                            <option value="General Cargo" selected>General Cargo</option>
+                            <option value="Chemicals / Hazardous">Chemicals / Hazardous</option>
+                            <option value="Pharmaceuticals (Cold Chain)">Pharmaceuticals (Cold Chain)</option>
+                            <option value="Automotive / Parts">Automotive / Parts</option>
+                            <option value="Textiles & Apparel">Textiles & Apparel</option>
+                            <option value="Industrial Machinery">Industrial Machinery</option>
                         </select>
                     </div>
+
                     <div class="col-md-2">
                         <label class="form-label small fw-bold text-uppercase text-muted">Mode</label>
-                        <select class="form-select shadow-none">
-                            <option selected>Sea Freight</option>
-                            <option>Air Freight</option>
-                            <option>Road Transport</option>
+                        <select class="form-select shadow-none" name="mode" required>
+                            <option value="Air Freight">Air Freight</option>
+                            <option value="Sea Freight (FCL)" selected>Sea Freight (FCL)</option>
+                            <option value="Sea Freight (LCL)">Sea Freight (LCL)</option>
+                            <option value="Road Transport">Road Transport</option>
+                            <option value="Project Cargo">Project Cargo</option>
+                            <option value="Door-to-Door Delivery">Door-to-Door Delivery</option>
                         </select>
                     </div>
+
                     <div class="col-md-2">
                         <label class="form-label small fw-bold text-uppercase text-muted">Weight</label>
-                        <input type="text" class="form-control shadow-none" placeholder="e.g. 500kg">
+                        <input type="text" class="form-control shadow-none" name="weight" placeholder="e.g. 500kg">
                     </div>
+
                     <div class="col-md-2">
                         <button type="submit" class="btn btn-primary w-100 fw-bold py-2 shadow-sm my-get-btn">GET QUOTE</button>
                     </div>
+
                 </div>
             </form>
         </div>
     </div>
-    </section>
+</section>
 
     <!-- Small story about company -->
     <section class="py-5 bg-white overflow-hidden">

@@ -7,16 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .reveal { opacity: 0; }
+    </style>
 </head>
-<body class="bg-light">
+<body>
 
-    <!-- Top Bar -->
     <div class="top-bar d-none d-lg-block">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="contact-info">
@@ -30,7 +27,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -44,11 +40,11 @@
         <div class="collapse navbar-collapse" id="aethonNavbar">
             <ul class="navbar-nav ms-auto align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link active fw-bold" href="index.html">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-bold" href="services.html" id="servicesDrop" role="button" data-bs-toggle="dropdown">
+                    <a class="nav-link active dropdown-toggle fw-bold" href="services.html" id="servicesDrop" role="button" data-bs-toggle="dropdown">
                         Services
                     </a>
                     <ul class="dropdown-menu border-0 shadow-sm">
@@ -73,7 +69,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link fw-bold text-primary" href="track.html">
+                    <a class="nav-link fw-bold text-accent" href="track.html">
                         <i class="fas fa-map-marker-alt me-1"></i> Track Shipment
                     </a>
                 </li>
@@ -83,7 +79,7 @@
                 </li>
 
                 <li class="nav-item ms-lg-3">
-                    <a class="btn btn-primary px-4 fw-bold shadow-sm" href="contact.html">
+                    <a class="btn btn-primary px-4 fw-bold shadow-sm" href="quote.html">
                         GET A QUOTE
                     </a>
                 </li>
@@ -92,10 +88,9 @@
     </div>
     </nav>
 
-
-    <header class="services-header text-center text-white">
+    <header class="services-header text-center text-white" style="background: linear-gradient(rgba(12, 33, 58, 0.88), rgba(12, 33, 58, 0.88)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070'); background-size: cover; background-position: center; padding: 120px 0;">
         <div class="container">
-            <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">Global Logistics Excellence</h1>
+            <h1 class="display-3 fw-bold animate__animated animate__fadeInDown">Our Services</h1>
             <p class="lead animate__animated animate__fadeInUp animate__delay-1s">End-to-end solutions for Air, Sea, Road, and Project Cargo.</p>
         </div>
     </header>
@@ -104,24 +99,24 @@
         <div class="container py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInLeft">
-                    <h2 class="fw-bold text-primary mb-4"><i class="fas fa-plane-departure me-3"></i>Air Freight Services</h2>
-                    <p class="lead">Fast, reliable, and time-critical delivery worldwide.</p>
-                    <p class="text-muted">We partner with global airlines to ensure your shipments reach destinations securely with real-time tracking.</p>
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-navy);"><i class="fas fa-plane-departure me-3" style="color: var(--brand-slate);"></i>Air Freight Services</h2>
+                    <p class="lead text-secondary">Fast, reliable, and time-critical delivery worldwide.</p>
+                    <p class="text-muted">We partner with global airlines to ensure your shipments reach destinations securely with real-time tracking frameworks.</p>
                     <div class="row mt-4 g-3">
                         <div class="col-md-6">
-                            <h6 class="fw-bold"><i class="fas fa-check-circle text-primary me-2"></i>What We Offer</h6>
-                            <ul class="list-unstyled small text-muted">
-                                <li>Door-to-door delivery</li>
-                                <li>Express & Deferred services</li>
-                                <li>Perishable & Hazardous cargo</li>
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-check-circle me-2" style="color: var(--brand-slate);"></i>What We Offer</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Door-to-door delivery</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Express & Deferred services</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Perishable & Hazardous cargo</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <h6 class="fw-bold"><i class="fas fa-sync text-primary me-2"></i>Our Process</h6>
-                            <ul class="list-unstyled small text-muted">
-                                <li>Booking & Documentation</li>
-                                <li>Customs & Air Transit</li>
-                                <li>Final Destination Delivery</li>
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-sync me-2" style="color: var(--brand-slate);"></i>Our Process</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Booking & Documentation</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Customs & Air Transit</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Final Destination Delivery</li>
                             </ul>
                         </div>
                     </div>
@@ -135,31 +130,31 @@
         </div>
     </section>
 
-    <section id="sea" class="py-5 bg-light border-bottom overflow-hidden">
+    <section id="sea" class="py-5 border-bottom overflow-hidden text-white" style="background-color: var(--brand-navy);">
         <div class="container py-5">
             <div class="row align-items-center flex-row-reverse g-5">
                 <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInRight">
-                    <h2 class="fw-bold text-primary mb-4"><i class="fas fa-ship me-3"></i>Sea Freight Services</h2>
-                    <p class="lead">Cost-effective solutions for large and bulk shipments.</p>
-                    <p class="text-muted">Ideal for moving large volumes efficiently across international waters with reliable sailing schedules.</p>
-                    <div class="row mt-4">
+                    <h2 class="fw-bold mb-4 text-white"><i class="fas fa-ship me-3" style="color: var(--brand-slate);"></i>Sea Freight Services</h2>
+                    <p class="lead text-white-50">Cost-effective solutions for large and bulk shipments.</p>
+                    <p class="text-white-50 opacity-75">Ideal for moving large volumes efficiently across international waters with reliable, pre-scheduled carrier lines.</p>
+                    <div class="row mt-4 g-3">
                         <div class="col-md-6">
-                            <h6 class="fw-bold">Service Range:</h6>
-                            <ul class="list-unstyled small text-muted">
-                                <li>FCL (Full Container) </li>
-                                <li>LCL (Less than Container) </li>
-                                <li>Reefer & Temperature sensitive </li>
+                            <h6 class="fw-bold text-white">Service Range:</h6>
+                            <ul class="list-unstyled small text-white-50 lh-lg">
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>FCL (Full Container Load)</li>
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>LCL (Less than Container Load)</li>
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>Reefer & Temperature sensitive</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <div class="p-3 bg-white rounded border-start border-4 border-primary">
-                                <p class="small mb-0"><strong>Economical Choice:</strong> Perfect for bulk cargo and long-haul efficiency.</p>
+                            <div class="p-4 rounded-3 shadow-sm border-start border-4" style="background-color: rgba(255, 255, 255, 0.04); border-color: var(--brand-slate) !important;">
+                                <p class="small text-white-50 mb-0"><strong>Economical Choice:</strong> Perfect for high-capacity bulk cargo configurations and long-haul intercontinental route efficiency.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInLeft">
-                    <div class="service-img-wrapper shadow-lg">
+                    <div class="service-img-wrapper shadow-lg" style="border-color: rgba(255,255,255,0.1);">
                         <img src="https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=1000" class="w-100" alt="Sea Freight">
                     </div>
                 </div>
@@ -167,128 +162,243 @@
         </div>
     </section>
 
-    <section class="py-5 bg-white border-bottom">
+    <section id="road" class="py-5 bg-white border-bottom overflow-hidden">
         <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInLeft">
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-navy);"><i class="fas fa-truck-moving me-3" style="color: var(--brand-slate);"></i>Land Freight (Road Transportation)</h2>
+                    <p class="lead text-secondary">Seamless inland connectivity across regional and cross-border commercial arteries.</p>
+                    <p class="text-muted">We provide efficient inland container and commercial road logistics utilizing modern, GPS-enabled fleet vehicles managed by vetted operators.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-shield-alt me-2" style="color: var(--brand-slate);"></i>Capabilities</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>FTL (Full Truck Load) Operations</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>LTL (Less than Truck Load) Consignments</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Multi-axle trailering for heavy goods</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i>Regional Core</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Gujarat local hub distribution networks</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Port-to-factory direct routing lines</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Real-time status transit reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInRight">
+                    <div class="service-img-wrapper shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?q=80&w=1000" class="w-100" alt="Road Transport">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="customs" class="py-5 border-bottom overflow-hidden text-white" style="background-color: var(--brand-navy);">
+        <div class="container py-5">
+            <div class="row align-items-center flex-row-reverse g-5">
+                <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInRight">
+                    <h2 class="fw-bold mb-4 text-white"><i class="fas fa-file-invoice me-3" style="color: var(--brand-slate);"></i>Customs Clearance</h2>
+                    <p class="lead text-white-50">Hassle-free clearance pathways under full legal compliance mandates.</p>
+                    <p class="text-white-50 opacity-75">Navigating international borders demands meticulous preparation. Our custom brokerage professionals manage all regulatory red tape efficiently.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-white">Documentation Support</h6>
+                            <ul class="list-unstyled small text-white-50 lh-lg">
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>Precise HS Code Classification</li>
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>Import / Export Bill processing</li>
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>Duty structure assessment modeling</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-3 shadow-sm border-start border-4" style="background-color: rgba(255, 255, 255, 0.04); border-color: var(--brand-slate) !important;">
+                                <p class="small text-white-50 mb-0"><strong>Regulatory Mastery:</strong> Fully verified support workflows conforming strictly to national port codes, reducing delay exposure risks at borders.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInLeft">
+                    <div class="service-img-wrapper shadow-lg" style="border-color: rgba(255,255,255,0.1);">
+                        <img src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?q=80&w=1000" class="w-100" alt="Customs Clearance">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="warehouse" class="py-5 bg-white border-bottom overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInLeft">
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-navy);"><i class="fas fa-warehouse me-3" style="color: var(--brand-slate);"></i>Secure Warehousing Solutions</h2>
+                    <p class="lead text-secondary">Safe, structured storage space with absolute visibility tracking controls.</p>
+                    <p class="text-muted">From inventory consolidation to cross-docking infrastructure, our strategic logistics storage units secure assets safely until deployment.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-boxes me-2" style="color: var(--brand-slate);"></i>Facility Specs</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Real-time WMS system tracing</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Consolidation & de-consolidation hubs</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Pick, pack, and label infrastructure</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-shield-alt me-2" style="color: var(--brand-slate);"></i>Security Measures</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>24/7 CCTV system tracking lines</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Strict quality-check handling protocols</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Modern safety integration features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInRight">
+                    <div class="service-img-wrapper shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1000" class="w-100" alt="Warehousing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project" class="py-5 border-bottom overflow-hidden text-white" style="background-color: var(--brand-navy);">
+        <div class="container py-5">
+            <div class="row align-items-center flex-row-reverse g-5">
+                <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInRight">
+                    <h2 class="fw-bold mb-4 text-white"><i class="fas fa-boxes me-3" style="color: var(--brand-slate);"></i>Project Cargo Engineering</h2>
+                    <p class="lead text-white-50">Specialized transport structures for oversized and high-value industrial payloads.</p>
+                    <p class="text-white-50 opacity-75">Oversized equipment, heavy engineering setups, and complex industrial systems require specialized logistics strategies, meticulous path clearing, and structural safety studies.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold text-white">Heavy-Lift Expertise</h6>
+                            <ul class="list-unstyled small text-white-50 lh-lg">
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>Comprehensive feasibility & risk analyses</li>
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>Custom multi-modal out-of-gauge methods</li>
+                                <li><i class="fas fa-minus me-2" style="color: var(--brand-slate);"></i>On-site monitoring & discharge oversight</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-3 shadow-sm border-start border-4" style="background-color: rgba(255, 255, 255, 0.04); border-color: var(--brand-slate) !important;">
+                                <p class="small text-white-50 mb-0"><strong>Tailored Heavy Solutions:</strong> From complex factory clearouts to massive heavy machinery movements, we build custom logistics maps ensuring reliable delivery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInLeft">
+                    <div class="service-img-wrapper shadow-lg" style="border-color: rgba(255,255,255,0.1);">
+                        <img src="https://images.unsplash.com/photo-1506015391300-4802dc74de2e?q=80&w=1000" class="w-100" alt="Project Cargo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="door-to-door" class="py-5 bg-white overflow-hidden">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 reveal animate__animated" data-animation="animate__fadeInLeft">
+                    <h2 class="fw-bold mb-4" style="color: var(--brand-navy);"><i class="fas fa-map-marked-alt me-3" style="color: var(--brand-slate);"></i>Door-to-Door Delivery (Air or Sea)</h2>
+                    <p class="lead text-secondary">Complete single-window transit solutions, straight from origin to destination.</p>
+                    <p class="text-muted">Eliminate the hassle of balancing multiple logistics providers. We control the complete process from factory pick-up to destination delivery.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-md-6">
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-globe-americas me-2" style="color: var(--brand-slate);"></i>Full Integration</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Origin terminal storage collection lines</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Integrated custom routing brokerage support</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Final mile residential or yard distribution</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="fw-bold" style="color: var(--brand-navy);"><i class="fas fa-star me-2" style="color: var(--brand-slate);"></i>Core Benefits</h6>
+                            <ul class="list-unstyled small text-muted lh-lg">
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Single-window transparency invoice setups</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Minimized container cargo handling transitions</li>
+                                <li><i class="fas fa-minus me-2 text-secondary"></i>Consistent timeline parameters</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 reveal animate__animated" data-animation="animate__fadeInRight">
+                    <div class="service-img-wrapper shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?q=80&w=1000" class="w-100" alt="Door to Door Delivery">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer pt-5 pb-3 shadow-lg" style="background-color: var(--brand-navy) !important; color: var(--pure-white);">
+        <div class="container">
             <div class="row g-4">
-                <div class="col-md-6 reveal animate__animated" data-animation="animate__zoomIn">
-                    <div class="p-5 border-0 rounded-4 shadow-sm bg-light h-100 transition-hover">
-                        <h3 class="fw-bold text-primary"><i class="fas fa-truck-moving me-2"></i>Road Transport</h3>
-                        <p class="text-muted">Efficient inland transportation with GPS-enabled fleet tracking.</p>
-                        <ul class="list-unstyled small">
-                            <li><i class="fas fa-check text-primary me-2"></i>FTL & LTL Solutions </li>
-                            <li><i class="fas fa-check text-primary me-2"></i>Last-mile delivery </li>
-                        </ul>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" alt="Aethon Maritimes Logo" style="height: 70px;" class="mb-4 bg-white p-2 rounded">
+                    <p class="small text-white-50">
+                        Aethon Maritimes provides integrated logistics solutions and specialized handling for complex global shipments.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://wa.me/919712395952" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-whatsapp fa-lg"></i></a>
                     </div>
                 </div>
-                <div class="col-md-6 reveal animate__animated" data-animation="animate__zoomIn">
-                    <div class="p-5 border-0 rounded-4 shadow-sm bg-light h-100 transition-hover">
-                        <h3 class="fw-bold text-primary"><i class="fas fa-file-invoice me-2"></i>Customs Clearance</h3>
-                        <p class="text-muted">Ensuring hassle-free clearance with full compliance to international trade laws.</p>
-                        <ul class="list-unstyled small">
-                            <li><i class="fas fa-check text-primary me-2"></i>HS Code Classification </li>
-                            <li><i class="fas fa-check text-primary me-2"></i>Expert regulatory knowledge </li>
-                        </ul>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled lh-lg small text-white-50">
+                        <li><a href="index.html" class="text-decoration-none text-reset hover-primary text-white-50">Home</a></li>
+                        <li><a href="services.html" class="text-decoration-none text-reset hover-primary text-white-50">Services</a></li>
+                        <li><a href="industries.html" class="text-decoration-none text-reset hover-primary text-white-50">Industries Served</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-reset hover-primary text-white-50">About Us</a></li>
+                        <li><a href="track.html" class="text-decoration-none text-reset hover-primary text-white-50">Track Shipment</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Our Locations</h5>
+                    <div class="text-white-50 small">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i><strong>Ahmedabad / Vadodara</strong></p> 
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i><strong>Morbi / Gandhidham</strong></p> 
+                        <p class="mt-3"><i class="fas fa-clock me-2" style="color: var(--brand-slate);"></i>Mon - Sat: 10:00 - 19:00</p> 
                     </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Newsletter</h5> 
+                    <p class="small text-white-50 mb-4">Subscribe to receive the latest logistics news and compliance updates.</p>
+                    <div class="input-group mb-4 shadow-sm">
+                        <input type="email" class="form-control border-0 px-3" placeholder="Enter Email" style="border-radius: 5px 0 0 5px;">
+                        <button class="btn btn-primary fw-bold px-4" style="border-radius: 0 5px 5px 0; background-color: var(--brand-slate) !important; border-color: var(--brand-slate) !important;">JOIN</button>
+                    </div>
+                    <div class="contact-box p-3 rounded bg-white bg-opacity-10">
+                        <p class="mb-1 small text-white-50">Support Email:</p>
+                        <a href="mailto:INFO@AETHONMARITIMES.COM" class="text-white text-decoration-none fw-bold small">INFO@AETHONMARITIMES.COM</a> 
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 opacity-10">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">&copy; 2026 Aethon Maritimes. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0 small">
+                        <li class="list-inline-item px-2"><a href="resources.html" class="text-white-50 text-decoration-none">Resources</a></li>
+                        <li class="list-inline-item px-2 border-start border-white border-opacity-10"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="warehouse" class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeIn">
-                <h2 class="fw-bold">Warehousing & Project Logistics</h2>
-                <div style="width: 80px; height: 4px; background: #0d2137; margin: 20px auto;"></div>
-            </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-6 reveal animate__animated" data-animation="animate__fadeInUp">
-                    <div class="bg-white p-5 rounded-4 shadow-sm h-100">
-                        <i class="fas fa-warehouse fa-3x text-primary mb-4"></i>
-                        <h4 class="fw-bold">Warehousing</h4>
-                        <p class="small text-muted">Safe facilities with real-time inventory visibility.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 reveal animate__animated" data-animation="animate__fadeInUp">
-                    <div class="bg-white p-5 rounded-4 shadow-sm h-100">
-                        <i class="fas fa-boxes fa-3x text-primary mb-4"></i>
-                        <h4 class="fw-bold">Project Cargo</h4>
-                        <p class="small text-muted">Handling oversized equipment with feasibility studies and risk analysis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-<footer class="bg-dark text-white pt-5 pb-3 mt-5 shadow-lg" style="background-color: #0d2137 !important;">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <img src="images/logo.png" alt="Aethon Maritimes Logo" style="height: 70px;" class="mb-4 bg-white p-2 rounded">
-                <p class="small text-white-50">
-                    Aethon Maritimes provides integrated logistics solutions and specialized handling for complex global shipments.
-                </p>
-                <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-linkedin fa-lg"></i></a>
-                    <a href="https://wa.me/919712395952" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-whatsapp fa-lg"></i></a>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 mb-4">
-                <h5 class="fw-bold mb-4 border-start border-primary border-4 ps-3">Quick Links</h5>
-                <ul class="list-unstyled lh-lg small text-white-50">
-                    <li><a href="index.html" class="text-decoration-none text-reset hover-primary">Home</a></li>
-                    <li><a href="services.html" class="text-decoration-none text-reset hover-primary">Services</a></li>
-                    <li><a href="industries.html" class="text-decoration-none text-reset hover-primary">Industries Served</a></li>
-                    <li><a href="about.html" class="text-decoration-none text-reset hover-primary">About Us</a></li>
-                    <li><a href="track.html" class="text-decoration-none text-reset hover-primary text-info">Track Shipment</a></li>
-                </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="fw-bold mb-4 border-start border-primary border-4 ps-3">Our Locations</h5>
-                <div class="text-white-50 small">
-                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i><strong>Ahmedabad / Vadodara</strong></p> 
-                    <p class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i><strong>Morbi / Gandhidham</strong></p> 
-                    <p class="mt-3"><i class="fas fa-clock text-primary me-2"></i>Mon - Sat: 10:00 - 19:00</p> 
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 mb-4">
-                <h5 class="fw-bold mb-4 border-start border-primary border-4 ps-3">Newsletter</h5> 
-                <p class="small text-white-50 mb-4">Subscribe to receive the latest logistics news and compliance updates.</p>
-                <div class="input-group mb-4 shadow-sm">
-                    <input type="email" class="form-control border-0 px-3" placeholder="Enter Email" style="border-radius: 5px 0 0 5px;">
-                    <button class="btn btn-primary fw-bold px-4" style="border-radius: 0 5px 5px 0;">JOIN</button>
-                </div>
-                <div class="contact-box p-3 rounded bg-white bg-opacity-10">
-                    <p class="mb-1 small">Support Email:</p>
-                    <a href="mailto:INFO@AETHONMARITIMES.COM" class="text-white text-decoration-none fw-bold small">INFO@AETHONMARITIMES.COM</a> 
-                </div>
-            </div>
-        </div>
-
-        <hr class="my-4 opacity-10">
-
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start">
-                <p class="small text-white-50 mb-0">&copy; 2026 Aethon Maritimes. All Rights Reserved.</p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-                <ul class="list-inline mb-0 small">
-                    <li class="list-inline-item px-2"><a href="resources.html" class="text-white-50 text-decoration-none">Resources</a></li>
-                    <li class="list-inline-item px-2 border-start border-white border-opacity-10"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Intersection Observer for Scroll Animations
-        const observerOptions = { threshold: 0.2 };
+        const observerOptions = { threshold: 0.15 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -302,7 +412,5 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
 </body>
 </html>

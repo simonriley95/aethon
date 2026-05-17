@@ -1,43 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get Quote | Aethon Maritimes</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Quote | Aethon Maritimes</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<section class="page-banner">
-  <h2>Request a Quote</h2>
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> info@aethonmaritimes.com</span>
+                <span class="ms-4"><i class="fas fa-phone"></i> +91 97123 95952</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Aethon Maritimes Logo" style="height: 60px;">
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#aethonNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="aethonNavbar">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-bold" href="services.html" id="servicesDrop" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm">
+                            <li><a class="dropdown-item" href="services.html#air">Air Freight</a></li>
+                            <li><a class="dropdown-item" href="services.html#sea">Sea Freight</a></li>
+                            <li><a class="dropdown-item" href="services.html#road">Road Transport</a></li>
+                            <li><a class="dropdown-item" href="services.html#customs">Customs Clearance</a></li>
+                            <li><a class="dropdown-item" href="services.html#warehouse">Warehousing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="industries.html">Industries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold text-accent" href="track.html">
+                            <i class="fas fa-map-marker-alt me-1"></i> Track Shipment
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary px-4 fw-bold shadow-sm" href="quote.html">
+                            GET A QUOTE
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-header text-center text-white" style="background: linear-gradient(rgba(12, 33, 58, 0.88), rgba(12, 33, 58, 0.88)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070'); background-size: cover; background-position: center; padding: 100px 0;">
+        <div class="container">
+            <h1 class="display-4 fw-bold animate__animated animate__fadeInDown">Request a Quote</h1>
+            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">Provide your shipment parameters below for a precise freight pricing assessment.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-5 bg-white">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4" style="background-color: var(--brand-light); border: 1px solid rgba(126,132,139,0.15) !important;">
+                    <form class="full-form">
+                        
+                        <h4 class="fw-bold mb-4" style="color: var(--brand-navy); border-left: 4px solid var(--brand-slate); padding-left: 12px;">Shipment Parameters</h4>
+                        
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Origin City or Port</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-map-marker-alt"></i></span>
+                                    <select class="form-select shadow-none border-start-0" id="quote-origin" required>
+                                        <option value="" disabled selected>Select Origin Location</option>
+                                        <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
+                                        <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
+                                        <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
+                                        <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
+                                        <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
+                                        <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
+                                        <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
+                                        <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
+                                        <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
+                                        <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
+                                        <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
+                                        <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
+                                        <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
+                                        <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
+                                        <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
+                                        <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
+                                        <option value="Port of New York">Port of New York (USNYC) - United States</option>
+                                        <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
+                                        <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Destination City or Port</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-map-marker-alt"></i></span>
+                                    <select class="form-select shadow-none border-start-0" id="quote-destination" required>
+                                        <option value="" disabled selected>Select Destination Location</option>
+                                        <option value="Mundra Port">Mundra Port (INMUN) - Gujarat</option>
+                                        <option value="Kandla Port">Kandla Port (INKAN) - Gujarat</option>
+                                        <option value="Ahmedabad ICD">Ahmedabad ICD (INAMD) - Gujarat</option>
+                                        <option value="Morbi Corridor">Morbi Tiling Corridor - Gujarat</option>
+                                        <option value="Vadodara ICD">Vadodara ICD (INBRC) - Gujarat</option>
+                                        <option value="Hazira Port">Hazira Port (INHZR) - Surat</option>
+                                        <option value="Pipavav Port">Pipavav Port (INPAV) - Rajula</option>
+                                        <option value="Nhava Sheva">Nhava Sheva / JNPT (INNSA) - Mumbai</option>
+                                        <option value="Chennai Port">Chennai Port (INMAA) - Tamil Nadu</option>
+                                        <option value="Kolkata Port">Kolkata Port (INCCU) - West Bengal</option>
+                                        <option value="Delhi ICD">Delhi ICD (INDLI) - Tughlakabad</option>
+                                        <option value="Port of Rotterdam">Port of Rotterdam (NLRTM) - Netherlands</option>
+                                        <option value="Port of Hamburg">Port of Hamburg (DEHAM) - Germany</option>
+                                        <option value="Port of Singapore">Port of Singapore (SGSIN) - Singapore</option>
+                                        <option value="Port of Shanghai">Port of Shanghai (CNSHA) - China</option>
+                                        <option value="Jebel Ali Port">Jebel Ali Port (AEJEA) - Dubai UAE</option>
+                                        <option value="Port of New York">Port of New York (USNYC) - United States</option>
+                                        <option value="Port of Felixstowe">Port of Felixstowe (GBFXT) - United Kingdom</option>
+                                        <option value="Port of Antwerp">Port of Antwerp (BEANR) - Belgium</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Transport Mode</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-truck-moving"></i></span>
+                                    <select class="form-select shadow-none border-start-0" id="quote-mode" required>
+                                        <option value="" disabled selected>Select Mode</option>
+                                        <option value="Air Freight">Air Freight</option>
+                                        <option value="Sea Freight (FCL)">Sea Freight (FCL)</option>
+                                        <option value="Sea Freight (LCL)">Sea Freight (LCL)</option>
+                                        <option value="Road Transport">Road Transport</option>
+                                        <option value="Project Cargo">Project Cargo</option>
+                                        <option value="Door-to-Door Delivery">Door-to-Door Delivery</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Cargo Type</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-boxes"></i></span>
+                                    <select class="form-select shadow-none border-start-0" id="quote-cargo" required>
+                                        <option value="" disabled selected>Select Cargo Classification</option>
+                                        <option value="General Cargo">General Cargo</option>
+                                        <option value="Chemicals / Hazardous">Chemicals / Hazardous</option>
+                                        <option value="Pharmaceuticals (Cold Chain)">Pharmaceuticals (Cold Chain)</option>
+                                        <option value="Automotive / Parts">Automotive / Parts</option>
+                                        <option value="Textiles & Apparel">Textiles & Apparel</option>
+                                        <option value="Industrial Machinery">Industrial Machinery</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Weight & Dimensions</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-weight-hanging"></i></span>
+                                    <input type="text" class="form-control shadow-none border-start-0" id="quote-weight" placeholder="e.g. 1500kg / 2x2x2 m" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold mb-4 mt-5" style="color: var(--brand-navy); border-left: 4px solid var(--brand-slate); padding-left: 12px;">Contact Information</h4>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-envelope"></i></span>
+                                    <input type="email" class="form-control shadow-none border-start-0" placeholder="name@company.com" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label small fw-bold text-uppercase text-muted">Phone Number</label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0 text-muted"><i class="fas fa-phone"></i></span>
+                                    <input type="tel" class="form-control shadow-none border-start-0" placeholder="+91 XXXXX XXXXX" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Additional Details / Special Instructions</label>
+                            <textarea class="form-control shadow-none" rows="4" placeholder="Mention handling requirements, special delivery timelines or hazardous declarations if applicable..."></textarea>
+                        </div>
+
+                        <div class="text-end mt-4">
+                            <button type="submit" class="btn btn-primary px-5 py-3 fw-bold shadow-sm text-uppercase">Submit Quote Request</button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="container form-section">
+    <!-- Footer section -->
+    <footer class="footer pt-5 pb-3 shadow-lg" style="background-color: var(--brand-navy) !important; color: var(--pure-white);">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="images/logo.png" alt="Aethon Maritimes Logo" style="height: 70px;" class="mb-4 bg-white p-2 rounded">
+                    <p class="small text-white-50">
+                        Aethon Maritimes provides integrated logistics solutions and specialized handling for complex global shipments.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://wa.me/919712395952" class="text-white opacity-75 hover-opacity-100"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
 
-  <form class="full-form">
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled lh-lg small text-white-50">
+                        <li><a href="index.html" class="text-decoration-none text-reset hover-primary text-white-50">Home</a></li>
+                        <li><a href="services.html" class="text-decoration-none text-reset hover-primary text-white-50">Services</a></li>
+                        <li><a href="industries.html" class="text-decoration-none text-reset hover-primary text-white-50">Industries Served</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-reset hover-primary text-white-50">About Us</a></li>
+                        <li><a href="track.html" class="text-decoration-none text-reset hover-primary text-white-50">Track Shipment</a></li>
+                    </ul>
+                </div>
 
-    <input type="text" placeholder="Origin">
-    <input type="text" placeholder="Destination">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Our Locations</h5>
+                    <div class="text-white-50 small">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i><strong>Ahmedabad / Vadodara</strong></p> 
+                        <p class="mb-2"><i class="fas fa-map-marker-alt me-2" style="color: var(--brand-slate);"></i><strong>Morbi / Gandhidham</strong></p> 
+                        <p class="mt-3"><i class="fas fa-clock me-2" style="color: var(--brand-slate);"></i>Mon - Sat: 10:00 - 19:00</p> 
+                    </div>
+                </div>
 
-    <select>
-      <option>Mode</option>
-      <option>Air Freight</option>
-      <option>Sea Freight</option>
-      <option>Road Transport</option>
-    </select>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4 border-start border-light border-4 ps-3 text-white">Newsletter</h5> 
+                    <p class="small text-white-50 mb-4">Subscribe to receive the latest logistics news and compliance updates.</p>
+                    <div class="input-group mb-4 shadow-sm">
+                        <input type="email" class="form-control border-0 px-3" placeholder="Enter Email" style="border-radius: 5px 0 0 5px;">
+                        <button class="btn btn-primary fw-bold px-4" style="border-radius: 0 5px 5px 0; background-color: var(--brand-slate) !important; border-color: var(--brand-slate) !important;">JOIN</button>
+                    </div>
+                    <div class="contact-box p-3 rounded bg-white bg-opacity-10">
+                        <p class="mb-1 small text-white-50">Support Email:</p>
+                        <a href="mailto:INFO@AETHONMARITIMES.COM" class="text-white text-decoration-none fw-bold small">INFO@AETHONMARITIMES.COM</a> 
+                    </div>
+                </div>
+            </div>
 
-    <input type="text" placeholder="Cargo Type">
-    <input type="text" placeholder="Weight & Dimensions">
-    <input type="email" placeholder="Email Address">
-    <input type="tel" placeholder="Phone Number">
+            <hr class="my-4 opacity-10">
 
-    <textarea placeholder="Additional Details"></textarea>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small text-white-50 mb-0">© 2026 Aethon Maritimes. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0 small">
+                        <li class="list-inline-item px-2"><a href="resources.html" class="text-white-50 text-decoration-none">Resources</a></li>
+                        <li class="list-inline-item px-2 border-start border-white border-opacity-10"><a href="#" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-    <button type="submit">Submit Quote Request</button>
-
-  </form>
-
-</section>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
