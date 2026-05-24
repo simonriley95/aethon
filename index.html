@@ -88,8 +88,8 @@
     </div>
     </nav>
 
-    <div class="hero-slider">
-        <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('https://images.unsplash.com/photo-1494412519320-aa613dfb7738?q=80&w=2070');">
+    <!-- <div class="hero-slider">
+        <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('images/banner-1.jpg');">
             <div class="container h-100 d-flex align-items-center">
                 <div class="hero-content text-white">
                     <h1 class="animate__animated animate__fadeInDown">Global Logistics <br><span style="color: var(--pure-white) !important;">Simplified.</span></h1>
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=2070');">
+        <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('images/banner-2.jpg');">
             <div class="container h-100 d-flex align-items-center">
                 <div class="hero-content text-white">
                     <h1>Precision in <br><span style="color: var(--pure-white) !important;">Movement.</span></h1>
@@ -110,7 +110,41 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <div class="hero-slider">
+    
+    <div class="slide position-relative overflow-hidden">
+        <video autoplay loop muted playsinline class="position-absolute w-100 h-100 top-50 start-50 translate-middle" style="object-fit: cover; z-index: 1;">
+            <source src="videos/banner-video.mp4" type="video/mp4">
+            <img src="images/banner-1.jpg" alt="Global Logistics Fallback">
+        </video>
+
+        <div class="position-absolute w-100 h-100 top-0 start-0" style="background: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)); z-index: 2;"></div>
+
+        <div class="container h-100 d-flex align-items-center position-relative" style="z-index: 3;">
+            <div class="hero-content text-white">
+                <h1 class="animate__animated animate__fadeInDown">Global Logistics <br><span style="color: var(--pure-white) !important;">Simplified.</span></h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Reliable Air, Sea, and Road freight solutions tailored for your business needs.</p>
+                <div class="btn-group animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="#services" class="btn btn-primary me-3">Our Services</a>
+                    <a href="track.html" class="btn btn-outline-light">Track Shipment</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- <div class="slide" style="background-image: linear-gradient(rgba(12, 33, 58, 0.75), rgba(12, 33, 58, 0.75)), url('images/banner-2.jpg');">
+        <div class="container h-100 d-flex align-items-center">
+            <div class="hero-content text-white">
+                <h1>Precision in <br><span style="color: var(--pure-white) !important;">Movement.</span></h1>
+                <p>Expert customs clearance and project cargo handling across Gujarat and the world.</p>
+                <a href="about.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div> -->
+
+</div>
 
     <section class="quick-quote-section" style="margin-top: -50px; position: relative; z-index: 10;">
         <div class="container">
@@ -380,39 +414,39 @@
         </div>
     </section>
 
-   <section class="py-5 border-top text-white" style="background-color: var(--brand-navy) !important;">
+ <section class="py-5 border-top border-bottom" style="background-color: var(--brand-navy) !important;">
     <div class="container py-4">
         
         <div class="text-center mb-5 reveal animate__animated" data-animation="animate__fadeInDown">
-            <h6 class="text-uppercase tracking-wider fw-bold" style="color: var(--brand-slate) !important;">Global Network Alliances</h6>
-            <h2 class="display-6 fw-bold text-white">Associated Partners & Carriers</h2>
+            <h6 class="text-uppercase tracking-wider fw-bold" style="color: var(--pure-white) !important;">Global Network Alliances</h6>
+            <h2 class="display-6 fw-bold" style="color: var(--pure-white) !important;">Associated Partners & Carriers</h2>
             <div class="mx-auto mt-3" style="width: 60px; height: 3px; background: var(--brand-slate);"></div>
         </div>
 
         <div class="partner-slider mt-4 reveal animate__animated" data-animation="animate__fadeInUp">
             
             <div class="mx-4 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">
-                <img src="images/maersk.jpg" alt="Maersk Line Logo" title="Maersk Line" class="img-fluid carrier-logo-filter" style="max-height: 45px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; transition: opacity 0.3s ease;">
+                <img src="images/maersk.jpg" alt="Maersk Line Logo" title="Maersk Line" class="img-fluid carrier-jpg-blend" style="max-height: 80px; width: auto; mix-blend-mode: multiply; opacity: 0.8; transition: all 0.3s ease;">
             </div>
             
             <div class="mx-4 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">
-                <img src="images/msc.jpg" alt="MSC Tracking Logo" title="MSC" class="img-fluid carrier-logo-filter" style="max-height: 45px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; transition: opacity 0.3s ease;">
+                <img src="images/msc.jpg" alt="MSC Tracking Logo" title="MSC" class="img-fluid carrier-jpg-blend" style="max-height: 80px; width: auto; mix-blend-mode: multiply; opacity: 0.8; transition: all 0.3s ease;">
             </div>
             
             <div class="mx-4 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">
-                <img src="images/cma.jpg" alt="CMA CGM Logistics Logo" title="CMA CGM" class="img-fluid carrier-logo-filter" style="max-height: 45px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; transition: opacity 0.3s ease;">
+                <img src="images/cma.jpg" alt="CMA CGM Logistics Logo" title="CMA CGM" class="img-fluid carrier-jpg-blend" style="max-height: 80px; width: auto; mix-blend-mode: multiply; opacity: 0.8; transition: all 0.3s ease;">
             </div>
             
             <div class="mx-4 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">
-                <img src="images/cosco.jpg" alt="COSCO Shipping Logo" title="COSCO Shipping" class="img-fluid carrier-logo-filter" style="max-height: 45px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; transition: opacity 0.3s ease;">
+                <img src="images/cosco.jpg" alt="COSCO Shipping Logo" title="COSCO Shipping" class="img-fluid carrier-jpg-blend" style="max-height: 80px; width: auto; mix-blend-mode: multiply; opacity: 0.8; transition: all 0.3s ease;">
             </div>
             
             <div class="mx-4 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">
-                <img src="images/one.jpg" alt="ONE Line Ocean Network Express Logo" title="Ocean Network Express" class="img-fluid carrier-logo-filter" style="max-height: 40px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; transition: opacity 0.3s ease;">
+                <img src="images/one.jpg" alt="ONE Line Ocean Network Express Logo" title="Ocean Network Express" class="img-fluid carrier-jpg-blend" style="max-height: 80px; width: auto; mix-blend-mode: multiply; opacity: 0.8; transition: all 0.3s ease;">
             </div>
             
             <div class="mx-4 text-center d-flex align-items-center justify-content-center" style="min-height: 60px;">
-                <img src="images/hapag.jpg" alt="Hapag-Lloyd Cargo Logo" title="Hapag-Lloyd" class="img-fluid carrier-logo-filter" style="max-height: 45px; width: auto; filter: brightness(0) invert(1); opacity: 0.75; transition: opacity 0.3s ease;">
+                <img src="images/hapag.jpg" alt="Hapag-Lloyd Cargo Logo" title="Hapag-Lloyd" class="img-fluid carrier-jpg-blend" style="max-height: 80px; width: auto; mix-blend-mode: multiply; opacity: 0.8; transition: all 0.3s ease;">
             </div>
 
         </div>

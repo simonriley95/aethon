@@ -268,8 +268,10 @@ footer a.hover-primary:hover {
     box-shadow: 0 10px 15px rgba(12, 33, 58, 0.05) !important;
 }
 
-
-.carrier-logo-filter:hover {
+.carrier-jpg-blend:hover {
     opacity: 1 !important;
-    /* transform: scale(1.04); */
+    transform: scale(1.05);
+}
+.dropdown-item:active {
+    background-color: #0c213a !important;
 }
