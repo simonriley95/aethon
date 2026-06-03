@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Aethon Maritimes</title>
+
+    <!-- FOR STANDARD BROWSERS AND TABS -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- FOR APPLE/IOS MOBILE DEVICES SHORTCUTS (OPTIONAL) -->
+    <link rel="apple-touch-icon" href="images/favicon.png">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -90,6 +96,13 @@
     </header>
 
     <div class="container py-5">
+        <!-- <?php if(isset($_GET['status']) && $_GET['status'] == 'error'): ?>
+            <div class="alert alert-danger role='alert'">Please fill out all fields correctly.</div>
+        <?php echo 'endif;'; ?>
+        <?php if(isset($_GET['status']) && $_GET['status'] == 'server-error'): ?>
+            <div class="alert alert-danger role='alert'">Server error. Please try calling us directly.</div>
+        <?php echo 'endif;'; ?> -->
+
         <div class="row g-5 py-4">
             
             <div class="col-lg-4">
@@ -106,14 +119,14 @@
 
                     <div class="mb-4 border-bottom border-light border-opacity-10 pb-3">
                         <h6 class="fw-bold small text-uppercase tracking-wider"><i class="fas fa-map-marker-alt me-2"></i>Branch Office - Morbi</h6>
-                        <p class="small mb-0 mt-2 style= line-height: 1.5; font-size: 0.85rem;">
+                        <p class="small mb-0 mt-2" style="line-height: 1.5; font-size: 0.85rem;">
                             Office No. 301, 3rd Floor Spire Time, Morbi Wankaner Highway, Near Trajpar Chokdi, Trajpar, Morbi 363642, Gujarat, India.
                         </p>
                     </div>
 
                     <div class="mb-4 border-bottom border-light border-opacity-10 pb-3">
                         <h6 class="fw-bold small text-uppercase tracking-wider"><i class="fas fa-map-marker-alt me-2"></i>Branch Office - Gandhidham</h6>
-                        <p class="small mb-0 mt-2 style= line-height: 1.5; font-size: 0.85rem;">
+                        <p class="small mb-0 mt-2" style="line-height: 1.5; font-size: 0.85rem;">
                             Office No. 10, Second Floor, Corporate Park, Plot No.102, Sector -8, Gandhidham, Gujarat, India, 370201
                         </p>
                     </div>
@@ -135,31 +148,31 @@
                 <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5" style="background-color: var(--brand-light); border: 1px solid rgba(126,132,139,0.15) !important;">
                     <h3 class="fw-bold mb-4" style="color: var(--brand-navy); border-left: 4px solid var(--brand-slate); padding-left: 12px;">Send Us A Message</h3>
                     
-                    <form class="contact-submission-form">
+                    <form action="contact-process.php" method="POST" class="contact-submission-form">
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-uppercase text-muted">First Name</label>
-                                <input type="text" class="form-control shadow-none bg-white" id="client-firstname" placeholder="John" required>
+                                <input type="text" class="form-control shadow-none bg-white" id="client-firstname" name="firstname" placeholder="John" required>
                             </div>
                             
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-uppercase text-muted">Last Name</label>
-                                <input type="text" class="form-control shadow-none bg-white" id="client-lastname" placeholder="Doe" required>
+                                <input type="text" class="form-control shadow-none bg-white" id="client-lastname" name="lastname" placeholder="Doe" required>
                             </div>
                             
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-uppercase text-muted">Email Address</label>
-                                <input type="email" class="form-control shadow-none bg-white" id="client-email" placeholder="john.doe@company.com" required>
+                                <input type="email" class="form-control shadow-none bg-white" id="client-email" name="email" placeholder="john.doe@company.com" required>
                             </div>
                             
                             <div class="col-md-6">
                                 <label class="form-label small fw-bold text-uppercase text-muted">Mobile Number</label>
-                                <input type="tel" class="form-control shadow-none bg-white" id="client-phone" placeholder="+91 XXXXX XXXXX" required>
+                                <input type="tel" class="form-control shadow-none bg-white" id="client-phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
                             </div>
                             
                             <div class="col-12">
                                 <label class="form-label small fw-bold text-uppercase text-muted">Message / Additional Comments</label>
-                                <textarea class="form-control shadow-none bg-white" id="client-message" rows="5" placeholder="Write your specific operational queries, tracking adjustments, or comments here..." required></textarea>
+                                <textarea class="form-control shadow-none bg-white" id="client-message" name="message" rows="5" placeholder="Write your specific operational queries, tracking adjustments, or comments here..." required></textarea>
                             </div>
                             
                             <div class="col-12 text-end mt-4">
@@ -219,13 +232,11 @@
 
 <script>
     function updateMap(lat, lon, locationQuery) {
-        // Highlight active sidebar button element
         const buttons = document.querySelectorAll('.map-btn');
         buttons.forEach(btn => btn.style.backgroundColor = 'var(--brand-light)');
         event.currentTarget.style.backgroundColor = '#ffffff';
         event.currentTarget.style.borderColor = 'var(--brand-slate)';
 
-        // Update Frame Target Point Source
         const iframe = document.getElementById('aethon-map-viewport');
         let searchString = "";
 
@@ -241,8 +252,6 @@
     }
 </script>
 
-
-    <!-- Footer section below -->
     <footer class="footer pt-5 pb-3 shadow-lg" style="background-color: var(--brand-navy) !important; color: var(--pure-white); font-family: system-ui, -apple-system, sans-serif;">
     <div class="container">
         <div class="row g-4 pb-4">
@@ -309,10 +318,16 @@
             <div class="col-lg-2 col-md-6">
                 <h6 class="text-uppercase tracking-wider fw-bold mb-3" style="color: var(--brand-slate); font-size: 0.85rem; border-left: 3px solid var(--brand-slate); padding-left: 10px;">Logistics Desk</h6>
                 <p class="small opacity-75 mb-2" style="font-size: 0.8rem;">Subscribe for compliance modifications updates.</p>
-                <div class="input-group mb-3 shadow-sm" style="height: 38px;">
-                    <input type="email" class="form-control border-0 px-2 small bg-white text-dark" placeholder="Email Address" style="border-radius: 4px 0 0 4px; font-size: 0.8rem;" required>
-                    <button class="btn fw-bold px-3 text-white text-uppercase" style="border-radius: 0 4px 4px 0; background-color: var(--brand-slate) !important; font-size: 0.75rem; tracking-spacing: 1px;">Join</button>
-                </div>
+                <!-- Form wrapper added around your original elements -->
+                <form action="subscribe.php" method="POST" class="input-group mb-3 shadow-sm" style="height: 38px;">
+                    
+                    <!-- Preserved: Added name="newsletter_email" to capture data -->
+                    <input type="email" name="newsletter_email" class="form-control border-0 px-2 small bg-white text-dark" placeholder="Email Address" style="border-radius: 4px 0 0 4px; font-size: 0.8rem;" required>
+                    
+                    <!-- Preserved: Added type="submit" to execute the submission -->
+                    <button type="submit" class="btn fw-bold px-3 text-white text-uppercase" style="border-radius: 0 4px 4px 0; background-color: var(--brand-slate) !important; font-size: 0.75rem; tracking-spacing: 1px;">Join</button>
+
+                </form>
                 <div class="p-2.5 rounded text-center" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);">
                     <span class="d-block opacity-50 text-uppercase fw-bold" style="font-size: 0.65rem; letter-spacing: 0.5px;">Operational Desk:</span>
                     <a href="mailto:info@aethonmaritimes.com" class="text-white text-decoration-none fw-bold small" style="font-size: 0.78rem; transition: color 0.2s;" onmouseover="this.style.color='var(--brand-slate)'" onmouseout="this.style.color='#ffffff'">info@aethonmaritimes.com</a>
@@ -325,12 +340,12 @@
 
         <div class="row align-items-center" style="font-size: 0.8rem;">
             <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <p class="mb-0 opacity-50">&copy; 2026 Aethon Maritimes. All Rights Reserved.</p>
+                <p class="mb-0 opacity-50">© 2026 Aethon Maritimes. All Rights Reserved.</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item px-2 border-end border-white border-opacity-10">
-                        <a href="resources.html" class="text-decoration-none opacity-60 text-white hover-opacity-100" style="transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Legal Declarations</a>
+                        <a href="resources.html" class="text-decoration-none opacity-60 text-white" style="transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Legal Declarations</a>
                     </li>
                     <li class="list-inline-item px-2">
                         <a href="#" class="text-decoration-none opacity-60 text-white" style="transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Privacy Safeguards</a>
