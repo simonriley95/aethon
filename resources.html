@@ -121,12 +121,13 @@
                         <h4 class="fw-bold mb-4 text-start" style="color: var(--brand-navy); border-left: 4px solid var(--brand-slate); padding-left: 12px;"><i class="fas fa-calculator me-2"></i> Shipping Utilities</h4>
                         <div class="row g-3 my-auto py-2">
                             <div class="col-6">
-                                <button class="btn btn-light w-100 py-4 small fw-bold text-uppercase border" style="background-color: var(--brand-light); border-color: rgba(12, 33, 58, 0.05) !important; color: var(--brand-navy);">
+                                <!-- CONNECTED: Added data target triggers for Bootstrap Modals -->
+                                <button type="button" class="btn btn-light w-100 py-4 small fw-bold text-uppercase border" data-bs-toggle="modal" data-bs-target="#currencyModal" style="background-color: var(--brand-light); border-color: rgba(12, 33, 58, 0.05) !important; color: var(--brand-navy);">
                                     <i class="fas fa-coins d-block mb-2 fa-lg" style="color: var(--brand-slate);"></i> Currency Converter
                                 </button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-light w-100 py-4 small fw-bold text-uppercase border" style="background-color: var(--brand-light); border-color: rgba(12, 33, 58, 0.05) !important; color: var(--brand-navy);">
+                                <button type="button" class="btn btn-light w-100 py-4 small fw-bold text-uppercase border" data-bs-toggle="modal" data-bs-target="#unitModal" style="background-color: var(--brand-light); border-color: rgba(12, 33, 58, 0.05) !important; color: var(--brand-navy);">
                                     <i class="fas fa-balance-scale d-block mb-2 fa-lg" style="color: var(--brand-slate);"></i> Unit Calculator
                                 </button>
                             </div>
@@ -137,6 +138,81 @@
             </div>
         </div>
     </section>
+
+    <!-- UTILITY MODULE A: CURRENCY CONVERTER MODAL -->
+    <div class="modal fade" id="currencyModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow rounded-4">
+                <div class="modal-header text-white p-4 rounded-top-4" style="background-color: #0c213a;">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-coins me-2"></i> Freight Currency Converter</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-redirect="modal" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 bg-light">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-secondary text-uppercase">Amount</label>
+                        <input type="number" id="curr-amount" class="form-control form-control-lg shadow-none border" value="1000" min="0">
+                    </div>
+                    <div class="row g-3 mb-4">
+                        <div class="col-6">
+                            <label class="form-label small fw-bold text-secondary text-uppercase">From</label>
+                            <select id="curr-from" class="form-select shadow-none">
+                                <option value="USD" selected>USD - US Dollar</option>
+                                <option value="INR">INR - Indian Rupee</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="AED">AED - UAE Dirham</option>
+                                <option value="SGD">SGD - Singapore Dollar</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label small fw-bold text-secondary text-uppercase">To</label>
+                            <select id="curr-to" class="form-select shadow-none">
+                                <option value="INR" selected>INR - Indian Rupee</option>
+                                <option value="USD">USD - US Dollar</option>
+                                <option value="EUR">EUR - Euro</option>
+                                <option value="AED">AED - UAE Dirham</option>
+                                <option value="SGD">SGD - Singapore Dollar</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-3 text-center border bg-white shadow-sm">
+                        <span class="small text-muted d-block text-uppercase fw-bold tracking-wider mb-1">Estimated Conversion Valuation</span>
+                        <h3 class="fw-bold mb-0 text-success" id="currency-result">--</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UTILITY MODULE B: SHIPPING LOGISTICS UNIT CALCULATOR -->
+    <div class="modal fade" id="unitModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow rounded-4">
+                <div class="modal-header text-white p-4 rounded-top-4" style="background-color: #0c213a;">
+                    <h5 class="modal-title fw-bold"><i class="fas fa-balance-scale me-2"></i> Logistics Unit Calculator</h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 bg-light">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-secondary text-uppercase">Conversion Track Type</label>
+                        <select id="calc-type" class="form-select shadow-none">
+                            <option value="kg-lbs" selected>Kilograms (kg) to Pounds (lbs)</option>
+                            <option value="lbs-kg">Pounds (lbs) to Kilograms (kg)</option>
+                            <option value="cbm-cft">Cubic Meters (CBM) to Cubic Feet (CFT)</option>
+                            <option value="cft-cbm">Cubic Feet (CFT) to Cubic Meters (CBM)</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold text-secondary text-uppercase">Value Input</label>
+                        <input type="number" id="unit-input" class="form-control form-control-lg shadow-none border" value="1" min="0">
+                    </div>
+                    <div class="p-4 rounded-3 text-center border bg-white shadow-sm">
+                        <span class="small text-muted d-block text-uppercase fw-bold tracking-wider mb-1">Calculated Cargo Metrics</span>
+                        <h3 class="fw-bold mb-0 text-primary" id="unit-result">--</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer pt-5 pb-3 shadow-lg" style="background-color: var(--brand-navy) !important; color: var(--pure-white); font-family: system-ui, -apple-system, sans-serif;">
     <div class="container">
@@ -204,15 +280,9 @@
             <div class="col-lg-2 col-md-6">
                 <h6 class="text-uppercase tracking-wider fw-bold mb-3" style="color: var(--brand-slate); font-size: 0.85rem; border-left: 3px solid var(--brand-slate); padding-left: 10px;">Logistics Desk</h6>
                 <p class="small opacity-75 mb-2" style="font-size: 0.8rem;">Subscribe for compliance modifications updates.</p>
-                <!-- Form wrapper added around your original elements -->
                 <form action="subscribe.php" method="POST" class="input-group mb-3 shadow-sm" style="height: 38px;">
-                    
-                    <!-- Preserved: Added name="newsletter_email" to capture data -->
                     <input type="email" name="newsletter_email" class="form-control border-0 px-2 small bg-white text-dark" placeholder="Email Address" style="border-radius: 4px 0 0 4px; font-size: 0.8rem;" required>
-                    
-                    <!-- Preserved: Added type="submit" to execute the submission -->
                     <button type="submit" class="btn fw-bold px-3 text-white text-uppercase" style="border-radius: 0 4px 4px 0; background-color: var(--brand-slate) !important; font-size: 0.75rem; tracking-spacing: 1px;">Join</button>
-
                 </form>
                 <div class="p-2.5 rounded text-center" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.06);">
                     <span class="d-block opacity-50 text-uppercase fw-bold" style="font-size: 0.65rem; letter-spacing: 0.5px;">Operational Desk:</span>
@@ -246,5 +316,57 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- INTERACTIVE SCRIPT: Real-time Calculation Processing Logic Engine -->
+    
+    <script>
+    $(document).ready(function() {
+        // Safe fallback rates in case the client device loses internet connection
+        let baseRates = { USD: 1.0, INR: 95.75, EUR: 0.92, AED: 3.67, SGD: 1.35 };
+
+        // Automatically fetch live commercial exchange data on page initialization
+        $.getJSON('https://open.er-api.com/v6/latest/USD', function(data) {
+            if (data && data.rates) {
+                baseRates = data.rates;
+                console.log("Aethon Exchange Desk: Live currency channels synchronized successfully.");
+            }
+        });
+
+        function runCurrencyConversion() {
+            let amount = parseFloat($('#curr-amount').val()) || 0;
+            let from = $('#curr-from').val();
+            let to = $('#curr-to').val();
+            
+            // Map conversion through standard USD benchmark baseline indices
+            let amtInUSD = amount / baseRates[from];
+            let rawResult = amtInUSD * baseRates[to];
+            
+            $('#currency-result').text(rawResult.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' ' + to);
+        }
+
+        function runUnitConversion() {
+            let val = parseFloat($('#unit-input').val()) || 0;
+            let type = $('#calc-type').val();
+            let out = "";
+
+            switch(type) {
+                case 'kg-lbs':  out = (val * 2.20462).toFixed(2) + " lbs"; break;
+                case 'lbs-kg':  out = (val / 2.20462).toFixed(2) + " kg"; break;
+                case 'cbm-cft': out = (val * 35.3147).toFixed(2) + " CFT"; break;
+                case 'cft-cbm': out = (val / 35.3147).toFixed(2) + " CBM"; break;
+            }
+            $('#unit-result').text(out);
+        }
+
+        // Real-time user input observation metrics
+        $('#curr-amount, #curr-from, #curr-to').on('input change', runCurrencyConversion);
+        $('#unit-input, #calc-type').on('input change', runUnitConversion);
+
+        // Run baseline setup metrics upon initial panel wake triggers
+        $('#currencyModal').on('shown.bs.modal', runCurrencyConversion);
+        $('#unitModal').on('shown.bs.modal', runUnitConversion);
+    });
+    </script>
+
 </body>
 </html>
